@@ -5,7 +5,7 @@ export interface RawItem {
   title: string;
   url: string;
   content: string;
-  authors: string[];
+  authors: string | null;
   published_at: string;
   fetch_date: string;
   metadata: Record<string, any>;
@@ -54,4 +54,36 @@ export interface FeedbackPayload {
   feed_item_id: string;
   action: 'like' | 'dislike' | 'more_like_this' | 'less_like_this' | 'too_basic' | 'too_advanced' | 'save';
   comment?: string;
+}
+
+export interface DiscoveryStats {
+  date: string;
+  total: number;
+  sources: { source: string; count: number }[];
+  latest_fetch: string | null;
+}
+
+export interface DiscoveryListItem {
+  id: string;
+  title: string;
+  published_at: string | null;
+}
+
+export interface PaginatedResponse<T> {
+  items: T[];
+  total: number;
+  limit: number;
+  offset: number;
+}
+
+export interface DiscoveryGroup {
+  name: string;
+  count: number;
+}
+
+export interface DiscoveryGroupsResponse {
+  source: string;
+  date: string;
+  key: string;
+  groups: DiscoveryGroup[];
 }

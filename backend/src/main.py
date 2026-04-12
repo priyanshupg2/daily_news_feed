@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from src.config import settings
 from src.db.database import init_db
-from src.api import feed, profile, feedback, raw_data
+from src.api import feed, profile, feedback, raw_data, discovery
 
 
 @asynccontextmanager
@@ -28,6 +28,7 @@ app.include_router(feed.router, prefix="/api")
 app.include_router(profile.router, prefix="/api")
 app.include_router(feedback.router, prefix="/api")
 app.include_router(raw_data.router, prefix="/api")
+app.include_router(discovery.router, prefix="/api")
 
 
 @app.get("/api/health")

@@ -1,0 +1,296 @@
+{
+  "exhaustive": {
+    "nbHits": true,
+    "typo": true
+  },
+  "exhaustiveNbHits": true,
+  "exhaustiveTypo": true,
+  "hits": [
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Kapura"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "llm",
+            "or",
+            "machine",
+            "learning"
+          ],
+          "value": "I work in the gaming industry, and while there was a push to try to find integrations for AI, the most promising usages of <em>machine learning</em> algorithms are in areas like anti-cheat. One engineer reported success using a GPT product to generate some code which he could then correct, but the majority of his job doesn't actually involve writing large amounts of new code so the utility is extremely limited. I don't know of any other usages of <em>LLM</em> across our teams.<p>I am extremely interested in hearing of success stories from other industries, <em>or</em> conversely I'd love to hear about what other experiments others have been doing."
+        },
+        "title": {
+          "fullyHighlighted": false,
+          "matchLevel": "partial",
+          "matchedWords": [
+            "llm",
+            "or"
+          ],
+          "value": "Ask HN: Have <em>LLM</em> <em>or</em> generative AI made you more productive?"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_Kapura",
+        "story_41742430",
+        "ask_hn"
+      ],
+      "author": "Kapura",
+      "children": [
+        41743062,
+        41743119,
+        41743504
+      ],
+      "created_at": "2024-10-04T15:28:28Z",
+      "created_at_i": 1728055708,
+      "num_comments": 2,
+      "objectID": "41742430",
+      "points": 2,
+      "story_id": 41742430,
+      "story_text": "I work in the gaming industry, and while there was a push to try to find integrations for AI, the most promising usages of machine learning algorithms are in areas like anti-cheat. One engineer reported success using a GPT product to generate some code which he could then correct, but the majority of his job doesn&#x27;t actually involve writing large amounts of new code so the utility is extremely limited. I don&#x27;t know of any other usages of LLM across our teams.<p>I am extremely interested in hearing of success stories from other industries, or conversely I&#x27;d love to hear about what other experiments others have been doing.",
+      "title": "Ask HN: Have LLM or generative AI made you more productive?",
+      "updated_at": "2024-10-05T05:24:54Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "codetrotter"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "llm",
+            "or",
+            "machine",
+            "learning"
+          ],
+          "value": "There are so many LLMs and other <em>Machine Learning</em> GitHub repos and huggingface downloads<p>Which are the actually good ones, in 2024?<p>List GitHub repos <em>or</em> huggingface links for <em>LLM</em> and other kinds of ML, that are usable and produce good output to a degree that you\u2019re personally happy to be using in 2024"
+        },
+        "title": {
+          "fullyHighlighted": false,
+          "matchLevel": "partial",
+          "matchedWords": [
+            "llm",
+            "or"
+          ],
+          "value": "Ask HN: Let's list every notable <em>LLM</em> <em>or</em> other ML repo <em>or</em> model"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_codetrotter",
+        "story_40253633",
+        "ask_hn"
+      ],
+      "author": "codetrotter",
+      "children": [
+        40253889
+      ],
+      "created_at": "2024-05-04T00:00:19Z",
+      "created_at_i": 1714780819,
+      "num_comments": 1,
+      "objectID": "40253633",
+      "points": 1,
+      "story_id": 40253633,
+      "story_text": "There are so many LLMs and other Machine Learning GitHub repos and huggingface downloads<p>Which are the actually good ones, in 2024?<p>List GitHub repos or huggingface links for LLM and other kinds of ML, that are usable and produce good output to a degree that you\u2019re personally happy to be using in 2024",
+      "title": "Ask HN: Let's list every notable LLM or other ML repo or model",
+      "updated_at": "2024-09-20T17:01:11Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "cmitsakis"
+        },
+        "title": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "llm",
+            "or",
+            "machine",
+            "learning"
+          ],
+          "value": "<em>LLM</em> censorship: <em>machine learning</em> challenge <em>or</em> a computer security problem? [pdf]"
+        },
+        "url": {
+          "fullyHighlighted": false,
+          "matchLevel": "partial",
+          "matchedWords": [
+            "llm"
+          ],
+          "value": "https://www.cl.cam.ac.uk/~is410/Papers/<em>llm</em>_censorship.pdf"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_cmitsakis",
+        "story_36811760"
+      ],
+      "author": "cmitsakis",
+      "created_at": "2023-07-21T09:23:04Z",
+      "created_at_i": 1689931384,
+      "num_comments": 0,
+      "objectID": "36811760",
+      "points": 1,
+      "story_id": 36811760,
+      "title": "LLM censorship: machine learning challenge or a computer security problem? [pdf]",
+      "updated_at": "2024-09-20T14:34:08Z",
+      "url": "https://www.cl.cam.ac.uk/~is410/Papers/llm_censorship.pdf"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "HardikVala"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "llm",
+            "or",
+            "machine",
+            "learning"
+          ],
+          "value": "A  variant of this question seems to get asked every 6 mo. but so far, I haven't seen this question tackled directly: <i>If I want to learn the concepts and fundamentals of AI from first principles, what educational resources should I use?</i><p>I'm not interested in hands-on guides (eg. how to train a DNN classifier in TensorFlow) <em>or</em> <em>LLM</em>-centric resources.<p>So far, I've put together the following curriculum:<p>1 Artificial Intelligence: A Modern Approach (<a href=\"https://aima.cs.berkeley.edu/\" rel=\"nofollow\">https://aima.cs.berkeley.edu/</a>) - Great for learning the breadth of foundational concepts, eg. local search algorithms, building up to modern AI.<p>2 Probabilistic <em>Machine Learning</em>: An Introduction (<a href=\"https://probml.github.io/pml-book/book1.html\" rel=\"nofollow\">https://probml.github.io/pml-book/book1.html</a>) - Going more in-depth into ML.<p>3 Dive into Deep Learning (<a href=\"https://d2l.ai/\" rel=\"nofollow\">https://d2l.ai/</a>) - Going deep into DL, including contemporary ideas like Transformers and Diffusion models.<p>4. Neural networks and Deep Learning (<a href=\"http://neuralnetworksanddeeplearning.com/\" rel=\"nofollow\">http://neuralnetworksanddeeplearning.com/</a>) could also be a great resource but the content probably overlaps significantly with 3.<p>Would anybody add/update/remove anything? (Don't have to limit recommendations to textbooks. Also open to courses, papers, etc.)<p>Sorry for the semi-redundant post."
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: How to learn AI from first principles?"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_HardikVala",
+        "story_42827913",
+        "ask_hn"
+      ],
+      "author": "HardikVala",
+      "children": [
+        42827932,
+        42827990,
+        42828125,
+        42828355,
+        42834448,
+        42834797,
+        42835158,
+        42835238,
+        42835662,
+        42836123,
+        42836582,
+        42836614,
+        42837198,
+        42837878,
+        42838026,
+        42838327,
+        42838345,
+        42838593,
+        42838722,
+        42839207,
+        42840508,
+        42840971,
+        42840993,
+        42841536,
+        42842568,
+        42842640,
+        42843306,
+        42844341,
+        42844783,
+        42848494,
+        42848893,
+        42851247,
+        42862883,
+        42876451,
+        42910669,
+        42918317,
+        42943379
+      ],
+      "created_at": "2025-01-26T05:20:15Z",
+      "created_at_i": 1737868815,
+      "num_comments": 56,
+      "objectID": "42827913",
+      "points": 145,
+      "story_id": 42827913,
+      "story_text": "A  variant of this question seems to get asked every 6 mo. but so far, I haven&#x27;t seen this question tackled directly: <i>If I want to learn the concepts and fundamentals of AI from first principles, what educational resources should I use?</i><p>I&#x27;m not interested in hands-on guides (eg. how to train a DNN classifier in TensorFlow) or LLM-centric resources.<p>So far, I&#x27;ve put together the following curriculum:<p>1 Artificial Intelligence: A Modern Approach (<a href=\"https:&#x2F;&#x2F;aima.cs.berkeley.edu&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;aima.cs.berkeley.edu&#x2F;</a>) - Great for learning the breadth of foundational concepts, eg. local search algorithms, building up to modern AI.<p>2 Probabilistic Machine Learning: An Introduction (<a href=\"https:&#x2F;&#x2F;probml.github.io&#x2F;pml-book&#x2F;book1.html\" rel=\"nofollow\">https:&#x2F;&#x2F;probml.github.io&#x2F;pml-book&#x2F;book1.html</a>) - Going more in-depth into ML.<p>3 Dive into Deep Learning (<a href=\"https:&#x2F;&#x2F;d2l.ai&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;d2l.ai&#x2F;</a>) - Going deep into DL, including contemporary ideas like Transformers and Diffusion models.<p>4. Neural networks and Deep Learning (<a href=\"http:&#x2F;&#x2F;neuralnetworksanddeeplearning.com&#x2F;\" rel=\"nofollow\">http:&#x2F;&#x2F;neuralnetworksanddeeplearning.com&#x2F;</a>) could also be a great resource but the content probably overlaps significantly with 3.<p>Would anybody add&#x2F;update&#x2F;remove anything? (Don&#x27;t have to limit recommendations to textbooks. Also open to courses, papers, etc.)<p>Sorry for the semi-redundant post.",
+      "title": "Ask HN: How to learn AI from first principles?",
+      "updated_at": "2025-12-27T07:23:05Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "quick_brown_fox"
+        },
+        "title": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "llm",
+            "or",
+            "machine",
+            "learning"
+          ],
+          "value": "<em>LLM</em> Censorship: A <em>Machine Learning</em> Challenge <em>or</em> a Computer Security Problem?"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://arxiv.org/abs/2307.10719"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_quick_brown_fox",
+        "story_36811781"
+      ],
+      "author": "quick_brown_fox",
+      "created_at": "2023-07-21T09:26:19Z",
+      "created_at_i": 1689931579,
+      "num_comments": 0,
+      "objectID": "36811781",
+      "points": 3,
+      "story_id": 36811781,
+      "title": "LLM Censorship: A Machine Learning Challenge or a Computer Security Problem?",
+      "updated_at": "2024-09-20T14:34:08Z",
+      "url": "https://arxiv.org/abs/2307.10719"
+    }
+  ],
+  "hitsPerPage": 5,
+  "nbHits": 42,
+  "nbPages": 9,
+  "page": 0,
+  "params": "query=%22LLM%22+OR+%22machine+learning%22&tags=story&hitsPerPage=5&advancedSyntax=true&analyticsTags=backend",
+  "processingTimeMS": 7,
+  "processingTimingsMS": {
+    "_request": {
+      "roundTrip": 17
+    },
+    "fetch": {
+      "scanning": 1,
+      "total": 2
+    },
+    "getIdx": {
+      "load": {
+        "gens": 2,
+        "total": 3
+      },
+      "total": 3
+    },
+    "total": 7
+  },
+  "query": "\"LLM\" OR \"machine learning\"",
+  "serverTimeMS": 7
+}

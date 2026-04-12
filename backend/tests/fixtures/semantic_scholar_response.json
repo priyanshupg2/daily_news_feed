@@ -1,0 +1,260 @@
+{
+  "total": 88650,
+  "token": "PCOBLCJZB2ADADGAXZJGL3UQGQQS27AFGH2EQFZEAZQEH7E54LG7MAZF27OY4BULAO54AO6I7W3HH2CKSFKTIBX46EXGBGGG22LFIRTEKLFCMJJCCKTS5VVJNMJ6GWJFKWU3BPI7NN4BPTQ",
+  "data": [
+    {
+      "paperId": "00a6f91158507539e0a15e3ddab48531813eb147",
+      "url": "https://www.semanticscholar.org/paper/00a6f91158507539e0a15e3ddab48531813eb147",
+      "title": "Cascading Training Model to Promote Screening, Brief Intervention, and Referral to Treatment Across South Africa: Rollout in an HIV Service Organization",
+      "venue": "Implementation Research and Practice",
+      "year": 2025,
+      "citationCount": 0,
+      "influentialCitationCount": 0,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": "CCBYNC",
+        "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12576171, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Medicine"
+      ],
+      "publicationDate": "2025-01-01",
+      "authors": [
+        {
+          "authorId": "2283476405",
+          "name": "Kira DiClemente-Bosco"
+        },
+        {
+          "authorId": "2841791",
+          "name": "Caroline C Kuo"
+        },
+        {
+          "authorId": "6287265",
+          "name": "G. Sibeko"
+        },
+        {
+          "authorId": "2086858028",
+          "name": "S. Allie"
+        },
+        {
+          "authorId": "2302371811",
+          "name": "Timothy Souza"
+        },
+        {
+          "authorId": "2239120499",
+          "name": "Tim Janssen"
+        },
+        {
+          "authorId": "2389719237",
+          "name": "Warren Cornelius"
+        },
+        {
+          "authorId": "2389725195",
+          "name": "Ayanda Mkhize"
+        },
+        {
+          "authorId": "2389718953",
+          "name": "Andrew Scheibe"
+        },
+        {
+          "authorId": "2203929315",
+          "name": "Anje Pretorius"
+        },
+        {
+          "authorId": "2389470453",
+          "name": "T. Sterling"
+        },
+        {
+          "authorId": "2329328727",
+          "name": "Sara J Becker"
+        }
+      ],
+      "abstract": "Background In South Africa, rates of HIV and alcohol use are among the highest globally, with a detrimental synergistic relationship. Screening, Brief Intervention, and Referral to Treatment (SBIRT) is an evidence-based, cost-effective approach to identifying people at risk of alcohol-related problems to deliver early intervention. We developed and deployed a cascading train-the-trainer model to promote SBIRT implementation in a large nongovernmental organization offering HIV services across South Africa. Method Between 2021 and 2022, we completed preparatory activities including designing scalable training resources prior to rolling out the train-the-trainer model across two South African provinces. We conducted a comprehensive assessment of outcomes at the trainer- (knowledge, fidelity), provider- (attitudes, confidence, perceived implementation potential, adoption), and client-encounter (reach) levels over approximately one year. Results We trained 12 novice trainers who then trained 206 providers to implement SBIRT. Trainer SBIRT knowledge increased pre- to posttraining, and fidelity of training delivery was high (99.0% of elements covered across sessions). Provider attitudes, confidence, and perceived implementation potential increased over time, and 64% of providers adopted SBIRT. Reach of the model varied by component, with 41,793 clients screened by trained providers. Of those screening positive for risky alcohol use, 86% received brief intervention (BI) and 53% received referral to treatment (RT). Additionally, 15,353 clients who did not screen as having risky alcohol use received BI and 1,122 received RT. Conclusion Results indicated that the cascading training model was delivered with high fidelity, associated with improvements in all provider outcomes, and reached high numbers of clients for the screening component of the model. Rates of BI and RT delivery were moderate to high, though data suggested over-application of these elements with some clients, highlighting the tension between reach and fidelity. Lessons learned will inform future scale-out of this model in HIV service settings in low- and middle-income countries. Plain Language Summary Training the HIV-care workforce to deliver screening, brief intervention, and referral to treatment for alcohol use in a non-governmental service organization in South Africa In South Africa, rates of HIV and alcohol use are high, and they negatively impact one another. An approach known as SBIRT\u2014Screening, Brief Intervention, and Referral to Treatment\u2014is an evidence-based and effective way to identify individuals with risky alcohol use and provide them with interventions to reduce alcohol-related risks. The purpose of this research is to test whether a cascading train-the-trainer model can mobilize a large workforce to use SBIRT in HIV service settings. Our research team partnered with a large nongovernmental organization serving populations at high-risk for HIV in South Africa to test this training model. A small group of expert trainers from our team trained 12 novice trainers from the partner organization in how to instruct providers to use SBIRT with their clients. These novice trainers then trained 206 providers within the partner organization covering almost all (99.0%) training elements. Almost two-thirds of these providers used SBIRT, screening 41,793 clients over approximately one year. The reach of brief intervention was very high; 86% of indicated clients who were seen by trained providers received a brief intervention. Reach of referral to treatment was moderate, with 53% of indicated clients seen by trained providers receiving a referral to treatment. We also found that many clients received either a brief intervention or a referral to treatment when they did not screen positive for risky alcohol use. Our results are encouraging with respect to the feasibility of the cascading training model and its ability to mobilize a large workforce to reach clients with SBIRT, yet the fidelity of the application of brief intervention and referral to treatment warrants further research. This work highlights the tension between reaching large numbers of clients and maintaining fidelity."
+    },
+    {
+      "paperId": "0168b85e777c464f6729c65bdbd1a49581616f93",
+      "url": "https://www.semanticscholar.org/paper/0168b85e777c464f6729c65bdbd1a49581616f93",
+      "title": "Large-Scale Validation of the Feasibility of GPT-4 as a Proofreading Tool for Head CT Reports.",
+      "venue": "Radiology",
+      "year": 2025,
+      "citationCount": 20,
+      "influentialCitationCount": 1,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1148/radiol.240701?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1148/radiol.240701, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Medicine"
+      ],
+      "publicationDate": "2025-01-01",
+      "authors": [
+        {
+          "authorId": "2281603906",
+          "name": "Songsoo Kim"
+        },
+        {
+          "authorId": "2342778582",
+          "name": "Donghyun Kim"
+        },
+        {
+          "authorId": "2263913136",
+          "name": "Hyun Joo Shin"
+        },
+        {
+          "authorId": "2339563373",
+          "name": "S. H. Lee"
+        },
+        {
+          "authorId": "2263763594",
+          "name": "Yeseul Kang"
+        },
+        {
+          "authorId": "2343713834",
+          "name": "Sejin Jeong"
+        },
+        {
+          "authorId": "2238893453",
+          "name": "Jaewoong Kim"
+        },
+        {
+          "authorId": "2383429268",
+          "name": "M. Han"
+        },
+        {
+          "authorId": "2011640",
+          "name": "Seong-Joon Lee"
+        },
+        {
+          "authorId": "2281510318",
+          "name": "Joonho Kim"
+        },
+        {
+          "authorId": "2310732793",
+          "name": "Jungyon Yum"
+        },
+        {
+          "authorId": "2118643793",
+          "name": "C. Han"
+        },
+        {
+          "authorId": "2268460555",
+          "name": "Dukyong Yoon"
+        }
+      ],
+      "abstract": "Background The increasing workload of radiologists can lead to burnout and errors in radiology reports. Large language models, such as OpenAI's GPT-4, hold promise as error revision tools for radiology. Purpose To test the feasibility of GPT-4 use by determining its error detection, reasoning, and revision performance on head CT reports with varying error types and to validate its clinical utility by comparison with human readers. Materials and Methods A total of 10\u2009300 head CT reports were retrospectively extracted from the Medical Information Mart for Intensive Care III public dataset. In experiment 1, among the 300 unaltered reports and 300 versions with applied errors, GPT-4 optimization was initially conducted with 200 reports. The remaining 400 were used for evaluation of error type detection, reasoning, and revision, as well as the analysis of reports with undetected errors. The performance was also compared with that of human readers. In experiment 2, the detection performance of GPT-4 was validated on 10\u2009000 unaltered reports that were deemed error-free by physicians, and an analysis of false-positive results was conducted. A permutation test was conducted to assess differences in performance. Results GPT-4 demonstrated commendable performance in error detection (sensitivity, 84% for interpretive error and 89% for factual error), reasoning, and revision. Compared with GPT-4, human readers had worse factual error detection sensitivity (0.33-0.69 vs 0.89; P = .008 for radiologist 4, P < .001 for others) and took longer to review (82-121 seconds vs 16 seconds, P < .001). In 10\u2009000 reports, GPT-4 detected 96 errors, with a low positive predictive value of 0.05, yet 14% of the false-positive responses were potentially beneficial. Conclusion GPT-4 effectively detects, reasons, and revises errors in radiology reports. While it shows excellent performance in identifying factual errors, its ability to prioritize clinically significant findings is limited. Recognizing its strengths and limitations, GPT-4 could serve as a feasible tool. \u00a9 RSNA, 2025 Supplemental material is available for this article. See also the editorial by Choi in this issue."
+    },
+    {
+      "paperId": "017348e48ab6c2e80686f3b7648f35f732f063d5",
+      "url": "https://www.semanticscholar.org/paper/017348e48ab6c2e80686f3b7648f35f732f063d5",
+      "title": "Boosting Efficient Reinforcement Learning for Vision-and-Language Navigation With Open-Sourced LLM",
+      "venue": "IEEE Robotics and Automation Letters",
+      "year": 2025,
+      "citationCount": 13,
+      "influentialCitationCount": 3,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/LRA.2024.3511402?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/LRA.2024.3511402, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "publicationDate": "2025-01-01",
+      "authors": [
+        {
+          "authorId": "2274204315",
+          "name": "Jiawei Wang"
+        },
+        {
+          "authorId": "2268808822",
+          "name": "Teng Wang"
+        },
+        {
+          "authorId": "2113721415",
+          "name": "Wenzhe Cai"
+        },
+        {
+          "authorId": "2197777612",
+          "name": "Lele Xu"
+        },
+        {
+          "authorId": "2243900379",
+          "name": "Changyin Sun"
+        }
+      ],
+      "abstract": null
+    },
+    {
+      "paperId": "01a04f7dce4b3e3f3017927bfd6c5af3d3e528af",
+      "url": "https://www.semanticscholar.org/paper/01a04f7dce4b3e3f3017927bfd6c5af3d3e528af",
+      "title": "Perceived Organisational Support as a Mediator Between Green Organisational Culture and Organisational Commitment: Evidence From Manufacturing Firms in Peru",
+      "venue": "SAGE Open",
+      "year": 2025,
+      "citationCount": 0,
+      "influentialCitationCount": 0,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1177/21582440251357698?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1177/21582440251357698, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": null,
+      "publicationDate": "2025-01-01",
+      "authors": [
+        {
+          "authorId": "2060447204",
+          "name": "C. Villar"
+        },
+        {
+          "authorId": "2283197888",
+          "name": "Rub\u00e9n Guevara"
+        }
+      ],
+      "abstract": "As organisations increasingly focus on sustainability, green organisational culture has gained significant attention for its potential impact on various organisational outcomes. One such outcome, organisational commitment, plays a critical role in enhancing employee motivation, retention, and overall firm performance. Another important research variable that affects organisational commitment is perceived organisational support. This study examined the mediating role of perceived organisational support (POS) in the relationship between green organisational culture and organisational commitment in large and medium-sized manufacturing firms. Using a quantitative approach, the study used a non-experimental, cross-sectional design and employed partial least squares structural equation modelling (PLS-SEM) to analyse data from a random sample of 154 firms. Data were processed with SmartPLS 4 software. The results revealed that POS exerts a complementary mediation in the relationship between green organisational culture and organisational commitment. A positive association was found between green organisational culture and POS, which in turn positively influences organisational commitment. While the links between green organisational culture and organisational commitment have been explored, the role of POS as a mediator in that relationship has remained unexamined. This study addressed this gap by demonstrating how POS impacts the green organisational culture-organisational commitment relationship. These findings offer valuable insights for managers seeking to enhance organisational commitment. By promoting a green organisational culture and supporting POS, firms can improve employee commitment, contributing to organisational success. This study provides valuable empirical evidence within a new geographical and industrial context\u2014namely, Peru\u2019s manufacturing sector. Manufacturing firms play a crucial role in advancing global sustainability. The findings suggest that when companies integrate eco-friendly practices into their business models, they experience positive effects on organisational behaviour, which in turn enhances their competitiveness. Furthermore, in line with the organisational support theory, this is the first study that demonstrates the complementary mediating effect of POS on the green organisational culture-organisational commitment relationship. Plain language summary This study explores the impact of green organisational culture on organisational commitment, with a focus on the role of perceived organisational support (POS) as a mediator. As organisations increasingly prioritize sustainability, fostering a green culture has become essential for improving key outcomes like employee motivation, retention, and overall performance. The research examined how POS, or the extent to which employees feel supported by their organisation, influences the relationship between a green organisational culture and organisational commitment. Using a survey-based approach with data from 154 medium and large manufacturing firms, the study employed Partial Least Squares Structural Equation Modeling (PLS-SEM) to analyse the data. The results revealed that POS plays a significant role in enhancing the effects of a green culture on organisational commitment, with employees who perceive strong support from their organisation showing a higher commitment when working in a green culture. While previous studies have explored the direct links between green organisational culture and organizational commitment, the role of POS as a mediator had not been examined until now. Furthermore, this study contributes valuable empirical evidence in a new geographical and industrial context, such as Peru\u2019s manufacturing sector, as manufacturing firms play an important role in the planet\u2019s sustainability. Results of this research imply that when firms incorporate ecofriendly practices into their business model, there are positive repercussions on organisational behaviour and, thus, on their competitiveness. This research fills that gap by demonstrating how POS strengthens the positive effects of a green culture on organizational commitment. The findings offer practical insights for managers, highlighting the importance of both promoting a green culture and ensuring that employees feel supported. These strategies can lead to higher employee commitment and, in turn, greater organisational success."
+    },
+    {
+      "paperId": "01bee98ef4af6e1a8547e786709e48b74a7798fe",
+      "url": "https://www.semanticscholar.org/paper/01bee98ef4af6e1a8547e786709e48b74a7798fe",
+      "title": "On large language models safety, security, and privacy: A survey",
+      "venue": "Journal of Electronic Science and Technology",
+      "year": 2025,
+      "citationCount": 33,
+      "influentialCitationCount": 0,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.jnlest.2025.100301?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.jnlest.2025.100301, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": null,
+      "publicationDate": "2025-01-01",
+      "authors": [
+        {
+          "authorId": "2262410856",
+          "name": "Ran Zhang"
+        },
+        {
+          "authorId": "2240254064",
+          "name": "Hongwei Li"
+        },
+        {
+          "authorId": "2340009501",
+          "name": "Xinyuan Qian"
+        },
+        {
+          "authorId": "2339971554",
+          "name": "Wen-Bo Jiang"
+        },
+        {
+          "authorId": "2340061935",
+          "name": "Hanxiao Chen"
+        }
+      ],
+      "abstract": null
+    }
+  ]
+}

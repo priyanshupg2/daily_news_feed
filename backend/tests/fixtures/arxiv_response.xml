@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/CmTxYxREm79M90xtsBea5xS3bRg</id>
+  <title>arXiv Query: search_query=cat:cs.LG&amp;id_list=&amp;start=0&amp;max_results=5</title>
+  <updated>2026-04-12T14:59:56Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=cat:cs.LG&amp;start=0&amp;max_results=5&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+  <opensearch:totalResults>260840</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.08537v1</id>
+    <title>Meta-learning In-Context Enables Training-Free Cross Subject Brain Decoding</title>
+    <updated>2026-04-09T17:59:32Z</updated>
+    <link href="https://arxiv.org/abs/2604.08537v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.08537v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Visual decoding from brain signals is a key challenge at the intersection of computer vision and neuroscience, requiring methods that bridge neural representations and computational models of vision. A field-wide goal is to achieve generalizable, cross-subject models. A major obstacle towards this goal is the substantial variability in neural representations across individuals, which has so far required training bespoke models or fine-tuning separately for each subject. To address this challenge, we introduce a meta-optimized approach for semantic visual decoding from fMRI that generalizes to novel subjects without any fine-tuning. By simply conditioning on a small set of image-brain activation examples from the new individual, our model rapidly infers their unique neural encoding patterns to facilitate robust and efficient visual decoding. Our approach is explicitly optimized for in-context learning of the new subject's encoding model and performs decoding by hierarchical inference, inverting the encoder. First, for multiple brain regions, we estimate the per-voxel visual response encoder parameters by constructing a context over multiple stimuli and responses. Second, we construct a context consisting of encoder parameters and response values over multiple voxels to perform aggregated functional inversion. We demonstrate strong cross-subject and cross-scanner generalization across diverse visual backbones without retraining or fine-tuning. Moreover, our approach requires neither anatomical alignment nor stimulus overlap. This work is a critical step towards a generalizable foundation model for non-invasive brain decoding.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-09T17:59:32Z</published>
+    <arxiv:comment>Accepted to CVPR 2026, website: https://github.com/ezacngm/brainCodec</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mu Nan</name>
+    </author>
+    <author>
+      <name>Muquan Yu</name>
+    </author>
+    <author>
+      <name>Weijian Mai</name>
+    </author>
+    <author>
+      <name>Jacob S. Prince</name>
+    </author>
+    <author>
+      <name>Hossein Adeli</name>
+    </author>
+    <author>
+      <name>Rui Zhang</name>
+    </author>
+    <author>
+      <name>Jiahang Cao</name>
+    </author>
+    <author>
+      <name>Benjamin Becker</name>
+    </author>
+    <author>
+      <name>John A. Pyles</name>
+    </author>
+    <author>
+      <name>Margaret M. Henderson</name>
+    </author>
+    <author>
+      <name>Chunfeng Song</name>
+    </author>
+    <author>
+      <name>Nikolaus Kriegeskorte</name>
+    </author>
+    <author>
+      <name>Michael J. Tarr</name>
+    </author>
+    <author>
+      <name>Xiaoqing Hu</name>
+    </author>
+    <author>
+      <name>Andrew F. Luo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.08527v1</id>
+    <title>Demystifying OPD: Length Inflation and Stabilization Strategies for Large Language Models</title>
+    <updated>2026-04-09T17:58:02Z</updated>
+    <link href="https://arxiv.org/abs/2604.08527v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.08527v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On-policy distillation (OPD) trains student models under their own induced distribution while leveraging supervision from stronger teachers. We identify a failure mode of OPD: as training progresses, on-policy rollouts can undergo abrupt length inflation, causing truncated trajectories to dominate the training data. This truncation collapse coincides with abrupt repetition saturation and induces biased gradient signals, leading to severe training instability and sharp degradation in validation performance. We attribute this problem to the interaction between student-induced data collection and the distillation objective, which implicitly favors long and repetitive rollouts. To address this issue, we propose StableOPD, a stabilized OPD framework that combines a reference-based divergence constraint with rollout mixture distillation. These together mitigate repetition-induced length inflation and further stabilize OPD training. Across multiple math reasoning datasets, our approach prevents truncation collapse, stabilizes training dynamics, and improves performance by 7.2% on average.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-09T17:58:02Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Feng Luo</name>
+    </author>
+    <author>
+      <name>Yu-Neng Chuang</name>
+    </author>
+    <author>
+      <name>Guanchu Wang</name>
+    </author>
+    <author>
+      <name>Zicheng Xu</name>
+    </author>
+    <author>
+      <name>Xiaotian Han</name>
+    </author>
+    <author>
+      <name>Tianyi Zhang</name>
+    </author>
+    <author>
+      <name>Vladimir Braverman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.08524v1</id>
+    <title>What Drives Representation Steering? A Mechanistic Case Study on Steering Refusal</title>
+    <updated>2026-04-09T17:57:14Z</updated>
+    <link href="https://arxiv.org/abs/2604.08524v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.08524v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Applying steering vectors to large language models (LLMs) is an efficient and effective model alignment technique, but we lack an interpretable explanation for how it works-- specifically, what internal mechanisms steering vectors affect and how this results in different model outputs. To investigate the causal mechanisms underlying the effectiveness of steering vectors, we conduct a comprehensive case study on refusal. We propose a multi-token activation patching framework and discover that different steering methodologies leverage functionally interchangeable circuits when applied at the same layer. These circuits reveal that steering vectors primarily interact with the attention mechanism through the OV circuit while largely ignoring the QK circuit-- freezing all attention scores during steering drops performance by only 8.75% across two model families. A mathematical decomposition of the steered OV circuit further reveals semantically interpretable concepts, even in cases where the steering vector itself does not. Leveraging the activation patching results, we show that steering vectors can be sparsified by up to 90-99% while retaining most performance, and that different steering methodologies agree on a subset of important dimensions.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-09T17:57:14Z</published>
+    <arxiv:comment>9 pages + appendix, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Stephen Cheng</name>
+    </author>
+    <author>
+      <name>Sarah Wiegreffe</name>
+    </author>
+    <author>
+      <name>Dinesh Manocha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.08504v1</id>
+    <title>Differentially Private Language Generation and Identification in the Limit</title>
+    <updated>2026-04-09T17:48:46Z</updated>
+    <link href="https://arxiv.org/abs/2604.08504v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.08504v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We initiate the study of language generation in the limit, a model recently introduced by Kleinberg and Mullainathan [KM24], under the constraint of differential privacy. We consider the continual release model, where a generator must eventually output a stream of valid strings while protecting the privacy of the entire input sequence. Our first main result is that for countable collections of languages, privacy comes at no qualitative cost: we provide an $\varepsilon$-differentially-private algorithm that generates in the limit from any countable collection. This stands in contrast to many learning settings where privacy renders learnability impossible. However, privacy does impose a quantitative cost: there are finite collections of size $k$ for which uniform private generation requires $Ω(k/\varepsilon)$ samples, whereas just one sample suffices non-privately.
+  We then turn to the harder problem of language identification in the limit. Here, we show that privacy creates fundamental barriers. We prove that no $\varepsilon$-DP algorithm can identify a collection containing two languages with an infinite intersection and a finite set difference, a condition far stronger than the classical non-private characterization of identification. Next, we turn to the stochastic setting where the sample strings are sampled i.i.d. from a distribution (instead of being generated by an adversary). Here, we show that private identification is possible if and only if the collection is identifiable in the adversarial model. Together, our results establish new dimensions along which generation and identification differ and, for identification, a separation between adversarial and stochastic settings induced by privacy constraints.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-09T17:48:46Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Anay Mehrotra</name>
+    </author>
+    <author>
+      <name>Grigoris Velegkas</name>
+    </author>
+    <author>
+      <name>Xifan Yu</name>
+    </author>
+    <author>
+      <name>Felix Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.08499v1</id>
+    <title>PIArena: A Platform for Prompt Injection Evaluation</title>
+    <updated>2026-04-09T17:42:45Z</updated>
+    <link href="https://arxiv.org/abs/2604.08499v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.08499v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prompt injection attacks pose serious security risks across a wide range of real-world applications. While receiving increasing attention, the community faces a critical gap: the lack of a unified platform for prompt injection evaluation. This makes it challenging to reliably compare defenses, understand their true robustness under diverse attacks, or assess how well they generalize across tasks and benchmarks. For instance, many defenses initially reported as effective were later found to exhibit limited robustness on diverse datasets and attacks. To bridge this gap, we introduce PIArena, a unified and extensible platform for prompt injection evaluation that enables users to easily integrate state-of-the-art attacks and defenses and evaluate them across a variety of existing and new benchmarks. We also design a dynamic strategy-based attack that adaptively optimizes injected prompts based on defense feedback. Through comprehensive evaluation using PIArena, we uncover critical limitations of state-of-the-art defenses: limited generalizability across tasks, vulnerability to adaptive attacks, and fundamental challenges when an injected task aligns with the target task. The code and datasets are available at https://github.com/sleeepeer/PIArena.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-09T17:42:45Z</published>
+    <arxiv:comment>To appear in ACL 2026. The code is available at https://github.com/sleeepeer/PIArena</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Runpeng Geng</name>
+    </author>
+    <author>
+      <name>Chenlong Yin</name>
+    </author>
+    <author>
+      <name>Yanting Wang</name>
+    </author>
+    <author>
+      <name>Ying Chen</name>
+    </author>
+    <author>
+      <name>Jinyuan Jia</name>
+    </author>
+  </entry>
+</feed>

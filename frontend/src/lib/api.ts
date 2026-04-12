@@ -1,4 +1,4 @@
-import type { FeedItem, GeneratedContent, AnnotatedItem, UserProfile, FeedbackPayload } from './types';
+import type { FeedItem, GeneratedContent, AnnotatedItem, UserProfile, FeedbackPayload, DiscoveryStats, DiscoveryListItem, PaginatedResponse, RawItem, DiscoveryGroupsResponse } from './types';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
@@ -51,4 +51,34 @@ export const api = {
       method: 'POST',
       body: JSON.stringify({ prompt }),
     }),
+
+  // Discovery
+  getDiscoveryStats: (date?: string) =>
+    fetchAPI<DiscoveryStats>(`/api/discovery/stats${date ? `?date=${date}` : ''}`),
+
+  getDiscoveryItems: (source: string, params?: { date?: string; limit?: number; offset?: number; group?: string; groupKey?: string }) => {
+    const qp = new URLSearchParams({ source });
+    if (params?.date) qp.set('date', params.date);
+    if (params?.limit) qp.set('limit', String(params.limit));
+    if (params?.offset) qp.set('offset', String(params.offset));
+    if (params?.group) qp.set('group', params.group);
+    if (params?.groupKey) qp.set('group_key', params.groupKey);
+    return fetchAPI<PaginatedResponse<DiscoveryListItem>>(`/api/discovery/items?${qp}`);
+  },
+
+  getDiscoveryGroups: (source: string, date?: string, key?: string) => {
+    const qp = new URLSearchParams({ source });
+    if (date) qp.set('date', date);
+    if (key) qp.set('key', key);
+    return fetchAPI<DiscoveryGroupsResponse>(`/api/discovery/groups?${qp}`);
+  },
+
+  getDiscoveryItem: (id: string) =>
+    fetchAPI<RawItem>(`/api/discovery/items/${id}`),
+
+  runDiscovery: (source?: string) =>
+    fetchAPI<{ stored: number; message: string }>(
+      `/api/discovery/run${source ? `?source=${source}` : ''}`,
+      { method: 'POST' },
+    ),
 };
