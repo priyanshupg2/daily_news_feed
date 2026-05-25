@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  
+
+  
+  <line x1="2" y1="22" x2="20" y2="32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.9"></line>
+
+  
+  <path d="M32 8 L57 52 L7 52 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"></path>
+
+  
+  <line x1="32" y1="32" x2="62" y2="22" stroke="#D98736" stroke-width="1.5" stroke-linecap="round"></line>
+  <line x1="32" y1="32" x2="62" y2="29" stroke="#C95361" stroke-width="1.5" stroke-linecap="round"></line>
+  <line x1="32" y1="32" x2="62" y2="36" stroke="#6B4BCC" stroke-width="1.5" stroke-linecap="round"></line>
+  <line x1="32" y1="32" x2="62" y2="43" stroke="#2D88A8" stroke-width="1.5" stroke-linecap="round"></line>
+  <line x1="32" y1="32" x2="62" y2="50" stroke="#2E8B5C" stroke-width="1.5" stroke-linecap="round"></line>
+
+  
+  <circle cx="32" cy="32" r="1.6" fill="currentColor"></circle>
+</svg>

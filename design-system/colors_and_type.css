@@ -1,0 +1,416 @@
+/* ============================================================
+   Prism — Design Foundations
+   Intelligence, refracted for who you are.
+   ============================================================
+   This file ships the visual foundations: typography, color,
+   spacing, radius, shadow, and motion. Import it everywhere.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ──────────────────────────────────────────────────────────
+     COLOR — Base
+     A warm paper base + deep ink. Inspired by editorial print
+     and museum lighting. Never pure white, never pure black.
+     ────────────────────────────────────────────────────────── */
+
+  /* Surfaces (light) — default = Sand. Time-of-day themes below override these. */
+  --prism-paper:        #FAF7F2;  /* page background, "Daylight" */
+  --prism-paper-2:      #F3EFE7;  /* recessed surface */
+  --prism-paper-3:      #EAE4D7;  /* divider tone */
+  --prism-card:         #FFFFFF;  /* raised card */
+  --prism-card-edge:    #E5DFD1;  /* card border */
+
+  /* Ink (text) */
+  --prism-ink:          #14130F;  /* primary ink — almost-black */
+  --prism-ink-2:        #3B3A36;  /* secondary text */
+  --prism-ink-3:        #6B6960;  /* tertiary / metadata */
+  --prism-ink-4:        #9C998D;  /* placeholder / dim */
+  --prism-hairline:     #DCD6C7;  /* hairline rules */
+
+  /* Inverse (dark mode-style surfaces, used selectively even in light theme) */
+  --prism-night:        #0E0D0B;  /* deep base */
+  --prism-night-2:      #1A1916;  /* raised on night */
+  --prism-night-3:      #2A2924;  /* divider on night */
+  --prism-night-fg:     #F5F1E8;  /* text on night */
+  --prism-night-fg-2:   #B8B3A4;  /* secondary on night */
+
+  /* ──────────────────────────────────────────────────────────
+     COLOR — The Spectrum (Lens colors)
+     White light refracted: each identity gets one wavelength.
+     Tuned in OKLCH for harmonious chroma at equal lightness.
+     Use only as accents — never as page backgrounds.
+     ────────────────────────────────────────────────────────── */
+
+  /* Founder — Amber (commerce, capital, warmth)        ~50°  */
+  --lens-founder:       oklch(68% 0.155 55);            /* #D98736 */
+  --lens-founder-soft:  oklch(94% 0.04 70);             /* tint  */
+  --lens-founder-ink:   oklch(38% 0.10 50);             /* on-soft text */
+
+  /* Engineer — Cyan (clarity, systems)                 ~210°  */
+  --lens-engineer:      oklch(62% 0.12 220);            /* #2D88A8 */
+  --lens-engineer-soft: oklch(94% 0.03 220);
+  --lens-engineer-ink:  oklch(35% 0.08 220);
+
+  /* Researcher — Violet (depth, curiosity)             ~290°  */
+  --lens-researcher:    oklch(56% 0.17 290);            /* #6B4BCC */
+  --lens-researcher-soft: oklch(94% 0.04 290);
+  --lens-researcher-ink: oklch(34% 0.12 290);
+
+  /* Operator — Verdant (execution, ground truth)       ~155°  */
+  --lens-operator:      oklch(58% 0.12 155);            /* #2E8B5C */
+  --lens-operator-soft: oklch(94% 0.04 155);
+  --lens-operator-ink:  oklch(34% 0.08 155);
+
+  /* Investor / Scout — Rose (patterns, conviction)     ~10°   */
+  --lens-investor:      oklch(62% 0.17 15);             /* #C95361 */
+  --lens-investor-soft: oklch(94% 0.04 15);
+  --lens-investor-ink:  oklch(38% 0.12 15);
+
+  /* Semantic */
+  --prism-positive:     oklch(58% 0.13 150);
+  --prism-warning:      oklch(72% 0.15 75);
+  --prism-critical:     oklch(56% 0.18 25);
+  --prism-info:         oklch(60% 0.11 230);
+
+  /* The signal beam — used for primary CTAs, focus rings.
+     A high-chroma, slightly-warm graphite that feels neutral
+     against the spectrum colors so they read as the accent. */
+  --prism-signal:       #14130F;  /* same as ink, intentional */
+  --prism-signal-on:    #FAF7F2;
+
+  /* ──────────────────────────────────────────────────────────
+     TYPE — Families
+     Newsreader: editorial serif, optical sizing. Display + long-form.
+     Geist:      neutral grotesk. UI, labels, body.
+     JetBrains:  technical mono. Data, sources, timestamps.
+     ────────────────────────────────────────────────────────── */
+
+  --font-display: "Newsreader", "Source Serif 4", Georgia, serif;
+  --font-sans:    "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale — modular, slightly compressed (1.18 ratio) */
+  --t-2xs:  11px;   /* eyebrow micro */
+  --t-xs:   12px;   /* metadata */
+  --t-sm:   13px;   /* secondary UI */
+  --t-base: 15px;   /* body */
+  --t-md:   17px;   /* lead body */
+  --t-lg:   20px;   /* small heading */
+  --t-xl:   24px;   /* h3 */
+  --t-2xl:  30px;   /* h2 */
+  --t-3xl:  40px;   /* h1 */
+  --t-4xl:  56px;   /* display */
+  --t-5xl:  76px;   /* hero display */
+
+  /* Line heights */
+  --lh-tight:  1.05;
+  --lh-snug:   1.2;
+  --lh-normal: 1.45;
+  --lh-relaxed: 1.6;
+
+  /* Letter spacing */
+  --tr-tight:   -0.02em;
+  --tr-normal:  0;
+  --tr-wide:    0.04em;
+  --tr-eyebrow: 0.14em; /* uppercase metadata labels */
+
+  /* Weights */
+  --fw-light:   300;
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold: 600;
+  --fw-bold:    700;
+
+  /* ──────────────────────────────────────────────────────────
+     SPACING — 4px base, with editorial generosity at large sizes
+     ────────────────────────────────────────────────────────── */
+  --s-0:   0px;
+  --s-px:  1px;
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:   12px;
+  --s-4:   16px;
+  --s-5:   20px;
+  --s-6:   24px;
+  --s-7:   32px;
+  --s-8:   40px;
+  --s-9:   48px;
+  --s-10:  64px;
+  --s-11:  80px;
+  --s-12:  120px;
+
+  /* ──────────────────────────────────────────────────────────
+     RADIUS — restrained. Editorial systems have sharper corners
+     than consumer apps. Capsules used sparingly for chips.
+     ────────────────────────────────────────────────────────── */
+  --r-none:  0px;
+  --r-xs:    2px;
+  --r-sm:    4px;
+  --r-md:    6px;   /* default for cards, inputs */
+  --r-lg:    10px;  /* large surfaces */
+  --r-xl:    14px;
+  --r-pill:  999px; /* chips only */
+
+  /* ──────────────────────────────────────────────────────────
+     SHADOWS — almost flat. Prism uses borders + paper tone for
+     depth, not drop shadows. Reserved for floating layers only.
+     ────────────────────────────────────────────────────────── */
+  --sh-flat:    0 0 0 1px var(--prism-hairline);
+  --sh-1:       0 1px 0 0 rgba(20,19,15,0.04), 0 0 0 1px var(--prism-hairline);
+  --sh-2:       0 2px 6px -2px rgba(20,19,15,0.08), 0 0 0 1px var(--prism-hairline);
+  --sh-pop:     0 12px 32px -8px rgba(20,19,15,0.18), 0 0 0 1px var(--prism-hairline);
+  --sh-focus:   0 0 0 3px rgba(20,19,15,0.12);
+
+  /* Inner — used on inputs */
+  --sh-inset:   inset 0 0 0 1px var(--prism-hairline);
+
+  /* ──────────────────────────────────────────────────────────
+     MOTION — calm, considered. Snap into place, never bounce.
+     ────────────────────────────────────────────────────────── */
+  --ease-out:   cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in:    cubic-bezier(0.55, 0, 0.68, 0.53);
+  --ease-snap:  cubic-bezier(0.32, 0.72, 0.0, 1);
+  --dur-fast:   140ms;
+  --dur-base:   220ms;
+  --dur-slow:   420ms;
+
+  /* ──────────────────────────────────────────────────────────
+     LAYOUT — reading widths
+     ────────────────────────────────────────────────────────── */
+  --w-reading: 64ch;   /* long-form */
+  --w-card:    640px;  /* feed card */
+  --w-app:     1280px; /* app shell */
+}
+
+/* ============================================================
+   SEMANTIC TYPE — Use these classes for body content.
+   ============================================================ */
+
+.p-display,
+.p-display-xl {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--tr-tight);
+  line-height: var(--lh-tight);
+  color: var(--prism-ink);
+  font-variation-settings: "opsz" 72;
+}
+.p-display-xl { font-size: var(--t-5xl); }
+.p-display    { font-size: var(--t-4xl); }
+
+.p-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-3xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-tight);
+  color: var(--prism-ink);
+  font-variation-settings: "opsz" 36;
+}
+.p-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.012em;
+  color: var(--prism-ink);
+  font-variation-settings: "opsz" 28;
+}
+.p-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--t-xl);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.005em;
+  color: var(--prism-ink);
+}
+.p-h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--t-lg);
+  line-height: var(--lh-snug);
+  color: var(--prism-ink);
+}
+
+.p-lead {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  font-size: var(--t-md);
+  line-height: var(--lh-relaxed);
+  color: var(--prism-ink-2);
+  font-variation-settings: "opsz" 24;
+}
+
+.p-body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-base);
+  line-height: var(--lh-relaxed);
+  color: var(--prism-ink);
+}
+
+.p-body-sm {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-sm);
+  line-height: var(--lh-normal);
+  color: var(--prism-ink-2);
+}
+
+.p-meta {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--t-xs);
+  line-height: 1;
+  color: var(--prism-ink-3);
+}
+
+.p-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--t-2xs);
+  line-height: 1;
+  letter-spacing: var(--tr-eyebrow);
+  text-transform: uppercase;
+  color: var(--prism-ink-3);
+}
+
+.p-mono {
+  font-family: var(--font-mono);
+  font-weight: var(--fw-regular);
+  font-size: var(--t-xs);
+  letter-spacing: 0;
+  color: var(--prism-ink-2);
+  font-feature-settings: "ss01", "cv01";
+}
+
+.p-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  font-size: var(--t-xl);
+  line-height: var(--lh-snug);
+  color: var(--prism-ink);
+  font-variation-settings: "opsz" 36;
+}
+
+/* Editorial drop cap — for long-form briefs */
+.p-dropcap::first-letter {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-size: 3.6em;
+  line-height: 0.9;
+  float: left;
+  margin: 0.05em 0.08em 0 0;
+  color: var(--prism-ink);
+  font-variation-settings: "opsz" 72;
+}
+
+/* ============================================================
+   BASE RESET (only when a page opts in via .prism-root)
+   Use on the outer-most wrapper so the system doesn't leak.
+   ============================================================ */
+.prism-root {
+  background: var(--prism-paper);
+  color: var(--prism-ink);
+  font-family: var(--font-sans);
+  font-size: var(--t-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.prism-root * { box-sizing: border-box; }
+
+/* ============================================================
+   TIME-OF-DAY THEMES — apply to <body> or any wrapper.
+   The paper itself refracts through the day. Same lens colors,
+   same ink hierarchy, different page tone. All five remain
+   light themes (never dark) to stay readable as a reading product.
+
+   Switch by JS:
+     const hour = new Date().getHours();
+     document.body.className = (
+       hour < 11 ? 'time-morning' :
+       hour < 14 ? 'time-midday' :
+       hour < 18 ? 'time-afternoon' :
+       hour < 22 ? 'time-evening' : 'time-night'
+     );
+   ============================================================ */
+
+.time-morning {
+  --prism-paper:    #FAF4DE;
+  --prism-paper-2:  #F1E9C4;
+  --prism-paper-3:  #EADFAB;
+  --prism-card:     #FFFCF0;
+  --prism-card-edge:#E8DEB6;
+  --prism-ink:      #1C1A0E;
+  --prism-ink-2:    #423C25;
+  --prism-ink-3:    #6E6748;
+  --prism-ink-4:    #9C955F;
+  --prism-hairline: #DDD3AB;
+}
+.time-midday {
+  --prism-paper:    #ECF0F4;
+  --prism-paper-2:  #DCE3EC;
+  --prism-paper-3:  #CFD8E3;
+  --prism-card:     #F9FBFD;
+  --prism-card-edge:#D2DAE3;
+  --prism-ink:      #0E141C;
+  --prism-ink-2:    #2C3848;
+  --prism-ink-3:    #56627A;
+  --prism-ink-4:    #8A95A8;
+  --prism-hairline: #CCD3DD;
+}
+.time-afternoon {
+  --prism-paper:    #F0F2E8;
+  --prism-paper-2:  #E3E7D2;
+  --prism-paper-3:  #D6DCBE;
+  --prism-card:     #FAFBF2;
+  --prism-card-edge:#D9DDC8;
+  --prism-ink:      #141810;
+  --prism-ink-2:    #353B2A;
+  --prism-ink-3:    #5E6657;
+  --prism-ink-4:    #8A917F;
+  --prism-hairline: #D2D7BD;
+}
+.time-evening {
+  --prism-paper:    #F5EBE2;
+  --prism-paper-2:  #ECDCC9;
+  --prism-paper-3:  #E1CCB2;
+  --prism-card:     #FBF4ED;
+  --prism-card-edge:#E0D0BE;
+  --prism-ink:      #1F1612;
+  --prism-ink-2:    #45342B;
+  --prism-ink-3:    #7A6A5A;
+  --prism-ink-4:    #A8978A;
+  --prism-hairline: #DEC9B4;
+}
+.time-night {
+  --prism-paper:    #F1E8DC;
+  --prism-paper-2:  #E6D9C5;
+  --prism-paper-3:  #DBC9AE;
+  --prism-card:     #F8F0E5;
+  --prism-card-edge:#D5C2A6;
+  --prism-ink:      #1C1410;
+  --prism-ink-2:    #43332A;
+  --prism-ink-3:    #6F5E50;
+  --prism-ink-4:    #A09080;
+  --prism-hairline: #D2BEA1;
+}
+.time-sand {
+  /* Original Sand — the editorial default, classic newsprint warmth */
+  --prism-paper:    #FAF7F2;
+  --prism-paper-2:  #F3EFE7;
+  --prism-paper-3:  #EAE4D7;
+  --prism-card:     #FFFFFF;
+  --prism-card-edge:#E5DFD1;
+  --prism-ink:      #14130F;
+  --prism-ink-2:    #3B3A36;
+  --prism-ink-3:    #6B6960;
+  --prism-ink-4:    #9C998D;
+  --prism-hairline: #DCD6C7;
+}

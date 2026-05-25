@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Source list</title>
+<style>
+.src {
+  display: grid;
+  grid-template-columns: 80px 1fr 60px;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 0;
+  border-top: 1px solid var(--prism-hairline);
+}
+.src:first-child { border-top: none; }
+.src-meta { font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3); }
+.src-title { font-family: var(--font-sans); font-size: 13px; color: var(--prism-ink); line-height: 1.35; }
+.src-score { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--prism-ink); text-align: right; }
+.src-domain { font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3); display: block; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="src">
+    <div class="src-meta">arxiv</div>
+    <div><div class="src-title">In-Context KV Cache Eviction for Long-Context LLMs</div><span class="src-domain">arxiv.org/abs/2511.04421</span></div>
+    <div class="src-score">0.92</div>
+  </div>
+  <div class="src">
+    <div class="src-meta">hn</div>
+    <div><div class="src-title">Show HN: A 200-line implementation of speculative decoding</div><span class="src-domain">news.ycombinator.com</span></div>
+    <div class="src-score">0.81</div>
+  </div>
+  <div class="src">
+    <div class="src-meta">reddit</div>
+    <div><div class="src-title">r/LocalLLaMA · Qwen 3 inference benchmarks on 3090</div><span class="src-domain">reddit.com</span></div>
+    <div class="src-score">0.74</div>
+  </div>
+  <div class="src">
+    <div class="src-meta">podcast</div>
+    <div><div class="src-title">Dwarkesh × Karpathy on training compute economics</div><span class="src-domain">dwarkesh.com</span></div>
+    <div class="src-score">0.71</div>
+  </div>
+</div>
+</body>
+</html>

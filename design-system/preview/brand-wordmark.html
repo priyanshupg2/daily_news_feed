@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Wordmark — lockups</title>
+<style>
+.card { padding: 22px 24px; }
+.intro {
+  font-family: var(--font-display); font-style: italic;
+  font-size: 13px; color: var(--prism-ink-2);
+  margin: 0 0 16px; line-height: 1.5;
+}
+.intro b { font-family: var(--font-sans); font-style: normal; font-weight: 600; color: var(--prism-ink); }
+
+.row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin-bottom: 12px;
+}
+.row.full { grid-template-columns: 1fr; }
+.tile {
+  background: var(--prism-card);
+  border: 1px solid var(--prism-hairline);
+  border-radius: var(--r-md);
+  padding: 28px 28px 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 86px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.tile.dark { background: var(--prism-night); border-color: var(--prism-night-3); }
+.tile-label {
+  position: absolute; top: 10px; left: 12px;
+  font-family: var(--font-mono); font-size: 9px;
+  font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--prism-ink-3);
+}
+.tile.dark .tile-label { color: var(--prism-night-fg-2); }
+
+/* Wordmark typography */
+.wm-hero {
+  font-family: var(--font-display);
+  font-style: italic; font-weight: 500;
+  font-size: 64px;
+  letter-spacing: -0.02em;
+  color: var(--prism-ink);
+  line-height: 1; margin: 0;
+}
+.wm-hero-dot {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg,
+    var(--lens-founder) 0%,
+    var(--lens-investor) 35%,
+    var(--lens-researcher) 65%,
+    var(--lens-engineer) 90%);
+  vertical-align: baseline;
+  margin-left: 4px;
+}
+
+.wm-row { display: flex; align-items: center; gap: 12px; }
+
+/* App rail size */
+.wm-rail {
+  font-family: var(--font-display);
+  font-style: italic; font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--prism-ink);
+  margin: 0;
+}
+.wm-rail-mark {
+  width: 22px; height: 22px;
+}
+
+/* Wordmark on night */
+.wm-night {
+  font-family: var(--font-display);
+  font-style: italic; font-weight: 500;
+  font-size: 38px;
+  letter-spacing: -0.012em;
+  color: var(--prism-night-fg);
+  margin: 0;
+  line-height: 1;
+}
+
+/* Tracked uppercase wordmark */
+.wm-mono {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--prism-ink);
+}
+.wm-mono-bar {
+  display: inline-block;
+  width: 24px; height: 2px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background: linear-gradient(90deg, var(--lens-founder), var(--lens-investor), var(--lens-researcher), var(--lens-engineer), var(--lens-operator));
+}
+
+/* Stacked vertical version */
+.wm-stack {
+  text-align: center;
+}
+.wm-stack-spec {
+  height: 3px; width: 80px; margin: 0 auto 10px;
+  background: linear-gradient(90deg, var(--lens-founder) 0%, var(--lens-investor) 25%, var(--lens-researcher) 50%, var(--lens-engineer) 75%, var(--lens-operator) 100%);
+  border-radius: 2px;
+}
+.wm-stack-name {
+  font-family: var(--font-display);
+  font-style: italic; font-weight: 500;
+  font-size: 34px;
+  letter-spacing: -0.012em;
+  color: var(--prism-ink);
+  margin: 0;
+  line-height: 1;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="intro">Four canonical lockups. The italic <b>Newsreader</b> wordmark is the constant; the dot, bar, and stacked-spectrum variants are the brand accents that let it live in different surfaces.</p>
+
+  <!-- Hero -->
+  <div class="row full">
+    <div class="tile" style="padding: 38px 36px 28px;">
+      <span class="tile-label">A · Hero — marketing, splash, social</span>
+      <div class="wm-row">
+        <h1 class="wm-hero">Prism<span class="wm-hero-dot"></span></h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- App rail + Tracked -->
+  <div class="row">
+    <div class="tile">
+      <span class="tile-label">B · App rail — 22 px lockup</span>
+      <div class="wm-row">
+        <svg class="wm-rail-mark" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3 L21 12 L12 21 L3 12 Z" stroke="var(--prism-ink)" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M12 8 L16 12 L12 16 L8 12 Z" fill="var(--prism-ink)"/>
+        </svg>
+        <p class="wm-rail">Prism</p>
+      </div>
+    </div>
+    <div class="tile">
+      <span class="tile-label">C · Tracked — footer, eyebrow</span>
+      <div class="wm-mono">
+        <span class="wm-mono-bar"></span>PRISM
+      </div>
+    </div>
+  </div>
+
+  <!-- Night + Stacked -->
+  <div class="row">
+    <div class="tile dark">
+      <span class="tile-label">D · On night — focus mode, dark splash</span>
+      <div class="wm-row">
+        <p class="wm-night">Prism<span style="display:inline-block; width:9px; height:9px; border-radius:999px; background: linear-gradient(135deg, var(--lens-founder), var(--lens-researcher), var(--lens-engineer)); margin-left: 3px; vertical-align: baseline;"></span></p>
+      </div>
+    </div>
+    <div class="tile">
+      <span class="tile-label">E · Stacked — favicon, app icon, og card</span>
+      <div class="wm-stack">
+        <div class="wm-stack-spec"></div>
+        <p class="wm-stack-name">Prism</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Semantic colors</title>
+<style>
+.sem-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.sem { display: flex; flex-direction: column; gap: 6px; }
+.sem-chip { height: 56px; border-radius: var(--r-sm); border: 1px solid var(--prism-hairline); }
+.sem-name { font-family: var(--font-sans); font-size: 12px; font-weight: 500; }
+.sem-use { font-family: var(--font-sans); font-size: 11px; color: var(--prism-ink-3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="sem-grid">
+    <div class="sem"><div class="sem-chip" style="background: var(--prism-positive);"></div><div class="sem-name">positive</div><div class="sem-use">success, shipped</div></div>
+    <div class="sem"><div class="sem-chip" style="background: var(--prism-warning);"></div><div class="sem-name">warning</div><div class="sem-use">stale, tune</div></div>
+    <div class="sem"><div class="sem-chip" style="background: var(--prism-critical);"></div><div class="sem-name">critical</div><div class="sem-use">muted, errored</div></div>
+    <div class="sem"><div class="sem-chip" style="background: var(--prism-info);"></div><div class="sem-name">info</div><div class="sem-use">tip, hint</div></div>
+  </div>
+</div>
+</body>
+</html>

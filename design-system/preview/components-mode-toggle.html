@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Mode toggle</title>
+<style>
+.modes {
+  display: inline-flex;
+  background: var(--prism-paper-2);
+  border-radius: var(--r-md);
+  padding: 3px;
+  gap: 2px;
+}
+.mode {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--prism-ink-3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  letter-spacing: -0.005em;
+}
+.mode.is-active { background: var(--prism-card); color: var(--prism-ink); box-shadow: 0 1px 2px rgba(20,19,15,0.06); }
+.label { font-family: var(--font-sans); font-size: 11px; color: var(--prism-ink-3); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.12em; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="label">Per-card mode toggle — the four presentation modes</div>
+  <div class="modes">
+    <button class="mode is-active">News</button>
+    <button class="mode">Explainer · basics</button>
+    <button class="mode">Explainer · delta</button>
+    <button class="mode">Discussion</button>
+  </div>
+  <div style="margin-top: 18px; font-family: var(--font-display); font-style: italic; font-size: 14px; color: var(--prism-ink-2);">Agent picks a default. You can switch per card. Generated on-demand and cached.</div>
+</div>
+</body>
+</html>

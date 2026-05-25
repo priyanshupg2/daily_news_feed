@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Buttons</title>
+<style>
+.btn {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.005em;
+}
+.btn-primary   { background: var(--prism-ink); color: var(--prism-paper); }
+.btn-secondary { background: var(--prism-card); color: var(--prism-ink); border-color: var(--prism-hairline); }
+.btn-ghost     { background: transparent; color: var(--prism-ink); }
+.btn-ghost:hover, .btn-secondary:hover { background: var(--prism-paper-2); }
+.btn-danger    { background: transparent; color: var(--prism-critical); border-color: transparent; }
+.btn-sm { padding: 6px 10px; font-size: 12px; }
+.btn-lg { padding: 14px 20px; font-size: 14px; }
+.row { display: flex; gap: 10px; align-items: center; padding: 4px 0; }
+.lbl { font-family: var(--font-sans); font-size: 11px; color: var(--prism-ink-3); width: 80px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="lbl">primary</div>
+    <button class="btn btn-primary">Open today's brief</button>
+    <button class="btn btn-primary btn-sm">Save</button>
+  </div>
+  <div class="row">
+    <div class="lbl">secondary</div>
+    <button class="btn btn-secondary">Add a lens</button>
+    <button class="btn btn-secondary btn-sm">Mute source</button>
+  </div>
+  <div class="row">
+    <div class="lbl">ghost</div>
+    <button class="btn btn-ghost">Cancel</button>
+    <button class="btn btn-danger btn-sm">Remove lens</button>
+  </div>
+</div>
+</body>
+</html>

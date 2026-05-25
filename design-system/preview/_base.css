@@ -1,0 +1,28 @@
+/* Preview card chrome — used by all cards in /preview.
+   Cards render in the Design System tab at ~700px wide. */
+
+@import url('../colors_and_type.css');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--prism-paper);
+  color: var(--prism-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.card {
+  padding: 28px 32px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.col { display: flex; flex-direction: column; }
+.grow { flex: 1; min-width: 0; }
