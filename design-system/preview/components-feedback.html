@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Feedback bar</title>
+<style>
+.fb { display: flex; align-items: center; gap: 4px; }
+.fb-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--r-md);
+  padding: 6px 10px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--prism-ink-2);
+  cursor: pointer;
+  letter-spacing: -0.005em;
+}
+.fb-btn:hover { background: var(--prism-paper-2); }
+.fb-btn.is-on { background: var(--prism-paper-2); color: var(--prism-ink); border-color: var(--prism-hairline); }
+.divider { width: 1px; height: 18px; background: var(--prism-hairline); margin: 0 6px; }
+.label { font-family: var(--font-sans); font-size: 11px; color: var(--prism-ink-3); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.12em; }
+svg { width: 14px; height: 14px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="label">Feedback bar — tunes lens, mutes sources</div>
+  <div class="fb">
+    <button class="fb-btn is-on">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v8a2 2 0 0 0 2 2h7.5a2 2 0 0 0 1.95-1.55l1.4-6A2 2 0 0 0 17.9 11H14V6a2 2 0 0 0-2-2l-3 7"/><path d="M3 11h4v10H3z"/></svg>
+      Sharp
+    </button>
+    <button class="fb-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 13V5a2 2 0 0 0-2-2H7.5a2 2 0 0 0-1.95 1.55l-1.4 6A2 2 0 0 0 6.1 13H10v5a2 2 0 0 0 2 2l3-7"/><path d="M21 13h-4V3h4z"/></svg>
+      Noise
+    </button>
+    <div class="divider"></div>
+    <button class="fb-btn">More like this</button>
+    <button class="fb-btn">Too basic</button>
+    <button class="fb-btn">Too advanced</button>
+    <div class="divider"></div>
+    <button class="fb-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      Save
+    </button>
+  </div>
+  <div style="margin-top: 14px; font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--prism-ink-2);">No emoji. Lucide-style SVG icons with currentColor, 1.8px stroke.</div>
+</div>
+</body>
+</html>

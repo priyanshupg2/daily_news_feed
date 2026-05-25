@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Motion</title>
+<style>
+.m-row { display: grid; grid-template-columns: 100px 90px 1fr; align-items: center; gap: 14px; padding: 8px 0; border-top: 1px solid var(--prism-hairline); }
+.m-row:first-child { border-top: none; }
+.m-name { font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink); }
+.m-val { font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3); }
+.m-use { font-family: var(--font-sans); font-size: 12px; color: var(--prism-ink-2); }
+.m-curve { height: 20px; flex: 1; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="m-row"><div class="m-name">dur-fast</div><div class="m-val">140 ms</div><div class="m-use">hover & focus state transitions</div></div>
+  <div class="m-row"><div class="m-name">dur-base</div><div class="m-val">220 ms</div><div class="m-use">sheets, panels, default appears</div></div>
+  <div class="m-row"><div class="m-name">dur-slow</div><div class="m-val">420 ms</div><div class="m-use">orchestrated reveals (brief opening)</div></div>
+  <div style="height: 14px;"></div>
+  <div class="m-row"><div class="m-name">ease-snap</div><div class="m-val">snap</div><div class="m-use">cubic-bezier(.32, .72, 0, 1)  — default</div></div>
+  <div class="m-row"><div class="m-name">ease-out</div><div class="m-val">decel</div><div class="m-use">cubic-bezier(.22, .61, .36, 1)</div></div>
+  <div style="margin-top: 14px; font-family: var(--font-sans); font-size: 11px; color: var(--prism-ink-3); font-style: italic; font-family: var(--font-display);">No bounces. Snap into place. Editorial = solid.</div>
+</div>
+</body>
+</html>

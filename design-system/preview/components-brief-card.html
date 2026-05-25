@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Brief card</title>
+</head>
+<body>
+<div class="card" style="padding: 22px;">
+  <article style="background: var(--prism-card); border: 1px solid var(--prism-hairline); border-radius: var(--r-md); padding: 22px 24px 20px; position: relative; overflow: hidden;">
+
+    <!-- Lens accent bar (single accent — leading edge) -->
+    <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--lens-founder);"></div>
+
+    <!-- Eyebrow -->
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+      <div style="display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-sans); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lens-founder-ink);">
+        <span style="width: 6px; height: 6px; border-radius: 999px; background: var(--lens-founder);"></span>
+        Founder lens · today
+      </div>
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3);">·</span>
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3);">12 sources merged</span>
+    </div>
+
+    <!-- Title (serif) -->
+    <h2 class="p-h2" style="margin: 0 0 8px;">Anthropic raised $13B at $183B post — three signals for B2B fintech</h2>
+
+    <!-- Lead (italic serif) -->
+    <p class="p-lead" style="margin: 0 0 10px;">The deck's go-to-market section mentions India explicitly. Enterprise revenue mix is shifting toward $1M+ contracts. The round closed in nine days.</p>
+
+    <!-- Why it matters -->
+    <p class="p-body" style="margin: 0 0 14px; color: var(--prism-ink-2);">
+      <span style="font-family: var(--font-sans); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--prism-ink); margin-right: 6px;">Why this is in your brief</span>
+      Your thesis is on agentic workflows for SMB payroll. The pricing data point sets a ceiling on what your customers will tolerate from upstream LLM costs.
+    </p>
+
+    <!-- Sources -->
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; padding-top: 12px; border-top: 1px solid var(--prism-hairline);">
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3);">information.com</span>
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3);">·</span>
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3);">anthropic.com/news</span>
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3);">·</span>
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3);">+ 10 more</span>
+    </div>
+  </article>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>The Spectrum — lens colors</title>
+<style>
+.lens-row { display: flex; align-items: center; gap: 14px; padding: 10px 0; border-top: 1px solid var(--prism-hairline); }
+.lens-row:first-child { border-top: none; padding-top: 0; }
+.lens-chip { width: 56px; height: 28px; border-radius: var(--r-sm); flex: none; }
+.lens-name { font-family: var(--font-sans); font-size: 14px; font-weight: 500; width: 110px; }
+.lens-role { font-family: var(--font-display); font-style: italic; font-size: 14px; color: var(--prism-ink-2); flex: 1; }
+.lens-tok  { font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink-3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="lens-row">
+    <div class="lens-chip" style="background: var(--lens-founder);"></div>
+    <div class="lens-name">Founder</div>
+    <div class="lens-role">commerce, capital, warmth</div>
+    <div class="lens-tok">--lens-founder</div>
+  </div>
+  <div class="lens-row">
+    <div class="lens-chip" style="background: var(--lens-investor);"></div>
+    <div class="lens-name">Investor</div>
+    <div class="lens-role">patterns, conviction</div>
+    <div class="lens-tok">--lens-investor</div>
+  </div>
+  <div class="lens-row">
+    <div class="lens-chip" style="background: var(--lens-researcher);"></div>
+    <div class="lens-name">Researcher</div>
+    <div class="lens-role">depth, curiosity</div>
+    <div class="lens-tok">--lens-researcher</div>
+  </div>
+  <div class="lens-row">
+    <div class="lens-chip" style="background: var(--lens-engineer);"></div>
+    <div class="lens-name">Engineer</div>
+    <div class="lens-role">clarity, systems</div>
+    <div class="lens-tok">--lens-engineer</div>
+  </div>
+  <div class="lens-row">
+    <div class="lens-chip" style="background: var(--lens-operator);"></div>
+    <div class="lens-name">Operator</div>
+    <div class="lens-role">execution, ground truth</div>
+    <div class="lens-tok">--lens-operator</div>
+  </div>
+</div>
+</body>
+</html>

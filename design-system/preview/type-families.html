@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Type families</title>
+<style>
+.fam { display: flex; gap: 24px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--prism-hairline); }
+.fam:first-child { border-top: none; padding-top: 0; }
+.fam-label { width: 130px; flex: none; }
+.fam-spec  { flex: 1; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="fam">
+    <div class="fam-label p-eyebrow">Display</div>
+    <div class="fam-spec p-h2" style="font-style: italic; margin: 0;">Newsreader</div>
+  </div>
+  <div class="fam">
+    <div class="fam-label p-eyebrow">UI / Body</div>
+    <div class="fam-spec" style="font-family: var(--font-sans); font-size: 28px; font-weight: 500; letter-spacing: -0.01em;">Geist</div>
+  </div>
+  <div class="fam">
+    <div class="fam-label p-eyebrow">Mono / Data</div>
+    <div class="fam-spec" style="font-family: var(--font-mono); font-size: 24px; font-weight: 500;">JetBrains Mono</div>
+  </div>
+</div>
+</body>
+</html>
