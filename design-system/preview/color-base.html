@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Base palette — pick which sticks</title>
+<style>
+.card { padding: 22px 26px; }
+.intro {
+  font-family: var(--font-display); font-style: italic;
+  font-size: 13px; color: var(--prism-ink-2);
+  margin: 0 0 16px; line-height: 1.5;
+}
+.intro b { font-family: var(--font-sans); font-style: normal; font-weight: 600; color: var(--prism-ink); }
+.intro .kbd { font-family: var(--font-mono); font-size: 11px; padding: 2px 6px; background: var(--prism-paper-2); border-radius: 3px; color: var(--prism-ink); }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+.slot {
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  display: flex; flex-direction: column;
+  position: relative;
+}
+
+.slot-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.slot-name {
+  font-family: var(--font-mono); font-size: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
+}
+.slot-hex { font-family: var(--font-mono); font-size: 9.5px; }
+
+.slot-stage {
+  padding: 12px;
+}
+.slot-h {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 17px; line-height: 1.1;
+  letter-spacing: -0.012em;
+  margin: 0 0 8px;
+  font-variation-settings: "opsz" 24;
+}
+.slot-h em { font-style: italic; }
+.slot-card-mini {
+  border-radius: 5px;
+  padding: 8px 10px;
+  border: 1px solid;
+}
+.slot-card-mini .ti { font-family: var(--font-display); font-size: 12px; line-height: 1.2; letter-spacing: -0.01em; }
+.slot-card-mini .me { font-family: var(--font-mono); font-size: 9px; margin-top: 3px; }
+
+.slot-swatches {
+  display: flex; gap: 4px; padding: 8px 12px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.sw { width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(0,0,0,0.08); }
+
+.note {
+  margin-top: 16px;
+  font-family: var(--font-display); font-style: italic;
+  font-size: 13px; color: var(--prism-ink-2); line-height: 1.5;
+}
+.note b { font-family: var(--font-sans); font-style: normal; font-weight: 600; color: var(--prism-ink); }
+.note .kbd { font-family: var(--font-mono); font-size: 11px; padding: 2px 6px; background: var(--prism-paper-2); border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="intro">Six papers to choose from. The web app has a <span class="kbd">Paper</span> picker live at the top — open it and click through each to see how it actually feels in motion. <b>We'll lock the default once you've seen them all.</b></p>
+
+  <div class="grid">
+
+    <!-- SAND -->
+    <div class="slot" style="background: #FAF7F2;">
+      <div class="slot-head" style="background: #FAF7F2;">
+        <span class="slot-name" style="color: #14130F;">Sand</span>
+        <span class="slot-hex" style="color: #6B6960;">#FAF7F2</span>
+      </div>
+      <div class="slot-stage">
+        <h3 class="slot-h" style="color: #14130F;">A day, <em>refracted.</em></h3>
+        <div class="slot-card-mini" style="background: #FFFFFF; border-color: #E5DFD1;">
+          <div class="ti" style="color: #14130F;">Anthropic raised $13B</div>
+          <div class="me" style="color: #6B6960;">FOUNDER · 12 sources</div>
+        </div>
+      </div>
+      <div class="slot-swatches" style="background: #FAF7F2;">
+        <span class="sw" style="background: #FAF7F2;"></span>
+        <span class="sw" style="background: #F3EFE7;"></span>
+        <span class="sw" style="background: #FFFFFF;"></span>
+        <span class="sw" style="background: #DCD6C7;"></span>
+        <span class="sw" style="background: #14130F;"></span>
+      </div>
+    </div>
+
+    <!-- BUTTER -->
+    <div class="slot" style="background: #FAF4DE;">
+      <div class="slot-head" style="background: #FAF4DE;">
+        <span class="slot-name" style="color: #1C1A0E;">Butter</span>
+        <span class="slot-hex" style="color: #6E6748;">#FAF4DE</span>
+      </div>
+      <div class="slot-stage">
+        <h3 class="slot-h" style="color: #1C1A0E;">A day, <em>refracted.</em></h3>
+        <div class="slot-card-mini" style="background: #FFFCF0; border-color: #E8DEB6;">
+          <div class="ti" style="color: #1C1A0E;">Anthropic raised $13B</div>
+          <div class="me" style="color: #6E6748;">FOUNDER · 12 sources</div>
+        </div>
+      </div>
+      <div class="slot-swatches" style="background: #FAF4DE;">
+        <span class="sw" style="background: #FAF4DE;"></span>
+        <span class="sw" style="background: #F1E9C4;"></span>
+        <span class="sw" style="background: #FFFCF0;"></span>
+        <span class="sw" style="background: #DDD3AB;"></span>
+        <span class="sw" style="background: #1C1A0E;"></span>
+      </div>
+    </div>
+
+    <!-- SKY -->
+    <div class="slot" style="background: #ECF0F4;">
+      <div class="slot-head" style="background: #ECF0F4;">
+        <span class="slot-name" style="color: #0E141C;">Sky</span>
+        <span class="slot-hex" style="color: #56627A;">#ECF0F4</span>
+      </div>
+      <div class="slot-stage">
+        <h3 class="slot-h" style="color: #0E141C;">A day, <em>refracted.</em></h3>
+        <div class="slot-card-mini" style="background: #F9FBFD; border-color: #D2DAE3;">
+          <div class="ti" style="color: #0E141C;">Anthropic raised $13B</div>
+          <div class="me" style="color: #56627A;">FOUNDER · 12 sources</div>
+        </div>
+      </div>
+      <div class="slot-swatches" style="background: #ECF0F4;">
+        <span class="sw" style="background: #ECF0F4;"></span>
+        <span class="sw" style="background: #DCE3EC;"></span>
+        <span class="sw" style="background: #F9FBFD;"></span>
+        <span class="sw" style="background: #CCD3DD;"></span>
+        <span class="sw" style="background: #0E141C;"></span>
+      </div>
+    </div>
+
+    <!-- SAGE -->
+    <div class="slot" style="background: #F0F2E8;">
+      <div class="slot-head" style="background: #F0F2E8;">
+        <span class="slot-name" style="color: #141810;">Sage</span>
+        <span class="slot-hex" style="color: #5E6657;">#F0F2E8</span>
+      </div>
+      <div class="slot-stage">
+        <h3 class="slot-h" style="color: #141810;">A day, <em>refracted.</em></h3>
+        <div class="slot-card-mini" style="background: #FAFBF2; border-color: #D9DDC8;">
+          <div class="ti" style="color: #141810;">Anthropic raised $13B</div>
+          <div class="me" style="color: #5E6657;">FOUNDER · 12 sources</div>
+        </div>
+      </div>
+      <div class="slot-swatches" style="background: #F0F2E8;">
+        <span class="sw" style="background: #F0F2E8;"></span>
+        <span class="sw" style="background: #E3E7D2;"></span>
+        <span class="sw" style="background: #FAFBF2;"></span>
+        <span class="sw" style="background: #D2D7BD;"></span>
+        <span class="sw" style="background: #141810;"></span>
+      </div>
+    </div>
+
+    <!-- TERRACOTTA -->
+    <div class="slot" style="background: #F5EBE2;">
+      <div class="slot-head" style="background: #F5EBE2;">
+        <span class="slot-name" style="color: #1F1612;">Terracotta</span>
+        <span class="slot-hex" style="color: #7A6A5A;">#F5EBE2</span>
+      </div>
+      <div class="slot-stage">
+        <h3 class="slot-h" style="color: #1F1612;">A day, <em>refracted.</em></h3>
+        <div class="slot-card-mini" style="background: #FBF4ED; border-color: #E0D0BE;">
+          <div class="ti" style="color: #1F1612;">Anthropic raised $13B</div>
+          <div class="me" style="color: #7A6A5A;">FOUNDER · 12 sources</div>
+        </div>
+      </div>
+      <div class="slot-swatches" style="background: #F5EBE2;">
+        <span class="sw" style="background: #F5EBE2;"></span>
+        <span class="sw" style="background: #ECDCC9;"></span>
+        <span class="sw" style="background: #FBF4ED;"></span>
+        <span class="sw" style="background: #DEC9B4;"></span>
+        <span class="sw" style="background: #1F1612;"></span>
+      </div>
+    </div>
+
+    <!-- LINEN -->
+    <div class="slot" style="background: #F1E8DC;">
+      <div class="slot-head" style="background: #F1E8DC;">
+        <span class="slot-name" style="color: #1C1410;">Linen</span>
+        <span class="slot-hex" style="color: #6F5E50;">#F1E8DC</span>
+      </div>
+      <div class="slot-stage">
+        <h3 class="slot-h" style="color: #1C1410;">A day, <em>refracted.</em></h3>
+        <div class="slot-card-mini" style="background: #F8F0E5; border-color: #D5C2A6;">
+          <div class="ti" style="color: #1C1410;">Anthropic raised $13B</div>
+          <div class="me" style="color: #6F5E50;">FOUNDER · 12 sources</div>
+        </div>
+      </div>
+      <div class="slot-swatches" style="background: #F1E8DC;">
+        <span class="sw" style="background: #F1E8DC;"></span>
+        <span class="sw" style="background: #E6D9C5;"></span>
+        <span class="sw" style="background: #F8F0E5;"></span>
+        <span class="sw" style="background: #D2BEA1;"></span>
+        <span class="sw" style="background: #1C1410;"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="note"><b>How to test.</b> Open the <b>Web app — daily brief</b> card. There's a paper picker at the top with all six options + "Auto · by time." Click through. The one that feels right after a few minutes of reading is the answer. Tell me the winner and I'll lock it as default.</p>
+</div>
+</body>
+</html>

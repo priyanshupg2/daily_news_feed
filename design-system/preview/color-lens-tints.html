@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Lens soft tints</title>
+<style>
+.col-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.tint { display: flex; flex-direction: column; gap: 0; border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--prism-hairline); }
+.tint-full { height: 38px; }
+.tint-soft { height: 30px; display: flex; align-items: center; justify-content: center; }
+.tint-soft span { font-family: var(--font-display); font-style: italic; font-size: 14px; }
+.tint-lbl { font-family: var(--font-mono); font-size: 10px; color: var(--prism-ink-3); padding: 6px 8px; background: var(--prism-card); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="col-grid">
+    <div class="tint">
+      <div class="tint-full" style="background: var(--lens-founder);"></div>
+      <div class="tint-soft" style="background: var(--lens-founder-soft);"><span style="color: var(--lens-founder-ink);">Founder</span></div>
+      <div class="tint-lbl">amber · 50°</div>
+    </div>
+    <div class="tint">
+      <div class="tint-full" style="background: var(--lens-investor);"></div>
+      <div class="tint-soft" style="background: var(--lens-investor-soft);"><span style="color: var(--lens-investor-ink);">Investor</span></div>
+      <div class="tint-lbl">rose · 15°</div>
+    </div>
+    <div class="tint">
+      <div class="tint-full" style="background: var(--lens-researcher);"></div>
+      <div class="tint-soft" style="background: var(--lens-researcher-soft);"><span style="color: var(--lens-researcher-ink);">Researcher</span></div>
+      <div class="tint-lbl">violet · 290°</div>
+    </div>
+    <div class="tint">
+      <div class="tint-full" style="background: var(--lens-engineer);"></div>
+      <div class="tint-soft" style="background: var(--lens-engineer-soft);"><span style="color: var(--lens-engineer-ink);">Engineer</span></div>
+      <div class="tint-lbl">cyan · 220°</div>
+    </div>
+    <div class="tint">
+      <div class="tint-full" style="background: var(--lens-operator);"></div>
+      <div class="tint-soft" style="background: var(--lens-operator-soft);"><span style="color: var(--lens-operator-ink);">Operator</span></div>
+      <div class="tint-lbl">verdant · 155°</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

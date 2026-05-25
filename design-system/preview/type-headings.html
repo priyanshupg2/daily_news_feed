@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Headings — type scale</title>
+<style>
+.card { padding: 24px 28px 22px; }
+.intro {
+  font-family: var(--font-display); font-style: italic;
+  font-size: 13px; color: var(--prism-ink-2);
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--prism-hairline);
+  line-height: 1.5;
+}
+.intro b { font-family: var(--font-sans); font-style: normal; font-weight: 600; color: var(--prism-ink); }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 130px 110px;
+  gap: 18px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: 1px solid var(--prism-hairline);
+}
+.row:first-of-type { border-top: none; padding-top: 8px; }
+
+.use {
+  font-family: var(--font-sans); font-size: 11px;
+  color: var(--prism-ink-2); line-height: 1.4;
+}
+.use b { font-family: var(--font-sans); font-weight: 600; color: var(--prism-ink); display: block; font-size: 11px; }
+
+.spec {
+  font-family: var(--font-mono); font-size: 10px;
+  color: var(--prism-ink-3); text-align: right; line-height: 1.5;
+  letter-spacing: 0;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="intro">The four heading levels. Examples are real Prism strings — but read them as <b>typography</b>, not as content. The right column is where each one shows up.</p>
+
+  <div class="row">
+    <div class="p-h1" style="margin:0;">Intelligence, refracted</div>
+    <div class="use"><b>h1</b>marketing hero, brief detail page title</div>
+    <div class="spec">40 px<br/>Newsreader<br/>regular</div>
+  </div>
+
+  <div class="row">
+    <div class="p-h2" style="margin:0;">Synthesis, not summary</div>
+    <div class="use"><b>h2</b>section header on marketing &amp; long-form briefs</div>
+    <div class="spec">30 px<br/>Newsreader<br/>regular</div>
+  </div>
+
+  <div class="row">
+    <div class="p-h3" style="margin:0;">Today's brief</div>
+    <div class="use"><b>h3</b>card titles, panel headers, screen titles</div>
+    <div class="spec">24 px<br/>Geist<br/>semibold</div>
+  </div>
+
+  <div class="row">
+    <div class="p-h4" style="margin:0;">Sources &amp; claims</div>
+    <div class="use"><b>h4</b>subsections inside a card or panel</div>
+    <div class="spec">20 px<br/>Geist<br/>semibold</div>
+  </div>
+</div>
+</body>
+</html>

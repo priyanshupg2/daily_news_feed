@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Prism mark — the diagram, improved</title>
+<style>
+.card { padding: 22px 26px; }
+.intro {
+  font-family: var(--font-display); font-style: italic;
+  font-size: 13px; color: var(--prism-ink-2);
+  margin: 0 0 18px; line-height: 1.5;
+}
+.intro b { font-family: var(--font-sans); font-style: normal; font-weight: 600; color: var(--prism-ink); }
+
+/* Hero stage — big animated diagram */
+.hero-stage {
+  position: relative;
+  background: var(--prism-paper);
+  border: 1px solid var(--prism-hairline);
+  border-radius: var(--r-md);
+  padding: 36px 0;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.hero-stage .label {
+  position: absolute; top: 12px; left: 14px;
+  font-family: var(--font-mono); font-size: 10px;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--prism-ink-3);
+}
+.hero-stage svg { width: 180px; height: 180px; }
+
+/* Variants row */
+.row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.var {
+  background: var(--prism-card);
+  border: 1px solid var(--prism-hairline);
+  border-radius: var(--r-md);
+  padding: 16px 14px 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.var-stage {
+  width: 84px; height: 84px;
+  background: var(--prism-paper);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+}
+.var-stage svg { width: 60px; height: 60px; }
+.var-name { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--prism-ink); }
+.var-desc { font-family: var(--font-display); font-style: italic; font-size: 11.5px; color: var(--prism-ink-3); text-align: center; line-height: 1.35; }
+
+/* Animations */
+@keyframes beam-in {
+  0%   { stroke-dasharray: 0 60; opacity: 0; }
+  20%  { stroke-dasharray: 0 60; opacity: 1; }
+  60%  { stroke-dasharray: 60 60; opacity: 1; }
+  100% { stroke-dasharray: 60 60; opacity: 1; }
+}
+@keyframes ray-out {
+  0%, 30%  { opacity: 0; transform: scaleX(0); }
+  60%       { opacity: 1; transform: scaleX(1); }
+  100%      { opacity: 1; transform: scaleX(1); }
+}
+.beam { animation: beam-in 3.6s ease-out infinite; }
+.ray  { transform-origin: 32px 32px; animation: ray-out 3.6s ease-out infinite; }
+.ray-1 { animation-delay: 0.05s; }
+.ray-2 { animation-delay: 0.15s; }
+.ray-3 { animation-delay: 0.25s; }
+.ray-4 { animation-delay: 0.35s; }
+.ray-5 { animation-delay: 0.45s; }
+
+.note {
+  margin-top: 14px;
+  font-family: var(--font-display); font-style: italic;
+  font-size: 13px; color: var(--prism-ink-2); line-height: 1.5;
+}
+.note b { font-family: var(--font-sans); font-style: normal; font-weight: 600; color: var(--prism-ink); }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="intro">Same diagram, three improvements stacked: <b>animated</b> (beam enters, rays fan out in sequence), <b>glass-feel</b> (subtle inner gradient on the triangle, no flat black), and <b>warm ink</b> (the stroke is a deep graphite, not pure black). Refresh to replay.</p>
+
+  <!-- Hero -->
+  <div class="hero-stage">
+    <span class="label">animated &middot; glass &middot; warm ink</span>
+    <svg viewBox="0 0 64 64">
+      <defs>
+        <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#3B3A36" stop-opacity="0.06"/>
+          <stop offset="55%" stop-color="#3B3A36" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#3B3A36" stop-opacity="0.06"/>
+        </linearGradient>
+        <linearGradient id="apex-shine" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%"  stop-color="#FFFFFF" stop-opacity="0.6"/>
+          <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Incoming beam (animated) -->
+      <line class="beam" x1="2" y1="36" x2="22" y2="36"
+            stroke="#3B3A36" stroke-width="2.2" stroke-linecap="round"/>
+
+      <!-- Glass-filled triangle -->
+      <path d="M32 10 L56 52 L8 52 Z" fill="url(#glass)"/>
+      <!-- Shine on top-left face -->
+      <path d="M32 10 L56 52 L8 52 Z" fill="url(#apex-shine)" opacity="0.7"/>
+      <!-- Stroke -->
+      <path d="M32 10 L56 52 L8 52 Z" stroke="#2A2924" stroke-width="2.6" stroke-linejoin="round" fill="none"/>
+
+      <!-- Rays out (animated, sequenced) -->
+      <g stroke-width="2.4" stroke-linecap="round">
+        <line class="ray ray-1" x1="22" y1="36" x2="62" y2="14" stroke="#D98736"/>
+        <line class="ray ray-2" x1="22" y1="36" x2="62" y2="24" stroke="#C95361"/>
+        <line class="ray ray-3" x1="22" y1="36" x2="62" y2="34" stroke="#6B4BCC"/>
+        <line class="ray ray-4" x1="22" y1="36" x2="62" y2="44" stroke="#2D88A8"/>
+        <line class="ray ray-5" x1="22" y1="36" x2="62" y2="54" stroke="#2E8B5C"/>
+      </g>
+
+      <!-- Vertex dot -->
+      <circle cx="22" cy="36" r="1.6" fill="#2A2924"/>
+    </svg>
+  </div>
+
+  <!-- Three static variants -->
+  <div class="row">
+    <div class="var">
+      <div class="var-stage">
+        <svg viewBox="0 0 64 64">
+          <line x1="2" y1="36" x2="22" y2="36" stroke="#2A2924" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M32 10 L56 52 L8 52 Z" fill="rgba(43,42,38,0.12)"/>
+          <path d="M32 10 L56 52 L8 52 Z" stroke="#2A2924" stroke-width="2.6" stroke-linejoin="round" fill="none"/>
+          <g stroke-width="2.4" stroke-linecap="round">
+            <line x1="22" y1="36" x2="62" y2="14" stroke="#D98736"/>
+            <line x1="22" y1="36" x2="62" y2="24" stroke="#C95361"/>
+            <line x1="22" y1="36" x2="62" y2="34" stroke="#6B4BCC"/>
+            <line x1="22" y1="36" x2="62" y2="44" stroke="#2D88A8"/>
+            <line x1="22" y1="36" x2="62" y2="54" stroke="#2E8B5C"/>
+          </g>
+          <circle cx="22" cy="36" r="1.6" fill="#2A2924"/>
+        </svg>
+      </div>
+      <div class="var-name">A · Graphite</div>
+      <div class="var-desc">warm dark stroke, soft glass fill</div>
+    </div>
+
+    <div class="var">
+      <div class="var-stage">
+        <svg viewBox="0 0 64 64">
+          <line x1="2" y1="36" x2="22" y2="36" stroke="#3F2D1E" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M32 10 L56 52 L8 52 Z" fill="rgba(63,45,30,0.10)"/>
+          <path d="M32 10 L56 52 L8 52 Z" stroke="#3F2D1E" stroke-width="2.6" stroke-linejoin="round" fill="none"/>
+          <g stroke-width="2.4" stroke-linecap="round">
+            <line x1="22" y1="36" x2="62" y2="14" stroke="#D98736"/>
+            <line x1="22" y1="36" x2="62" y2="24" stroke="#C95361"/>
+            <line x1="22" y1="36" x2="62" y2="34" stroke="#6B4BCC"/>
+            <line x1="22" y1="36" x2="62" y2="44" stroke="#2D88A8"/>
+            <line x1="22" y1="36" x2="62" y2="54" stroke="#2E8B5C"/>
+          </g>
+          <circle cx="22" cy="36" r="1.6" fill="#3F2D1E"/>
+        </svg>
+      </div>
+      <div class="var-name">B · Cocoa</div>
+      <div class="var-desc">deep warm brown ink</div>
+    </div>
+
+    <div class="var">
+      <div class="var-stage">
+        <svg viewBox="0 0 64 64">
+          <line x1="2" y1="36" x2="22" y2="36" stroke="#1F2A3C" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M32 10 L56 52 L8 52 Z" fill="rgba(31,42,60,0.10)"/>
+          <path d="M32 10 L56 52 L8 52 Z" stroke="#1F2A3C" stroke-width="2.6" stroke-linejoin="round" fill="none"/>
+          <g stroke-width="2.4" stroke-linecap="round">
+            <line x1="22" y1="36" x2="62" y2="14" stroke="#D98736"/>
+            <line x1="22" y1="36" x2="62" y2="24" stroke="#C95361"/>
+            <line x1="22" y1="36" x2="62" y2="34" stroke="#6B4BCC"/>
+            <line x1="22" y1="36" x2="62" y2="44" stroke="#2D88A8"/>
+            <line x1="22" y1="36" x2="62" y2="54" stroke="#2E8B5C"/>
+          </g>
+          <circle cx="22" cy="36" r="1.6" fill="#1F2A3C"/>
+        </svg>
+      </div>
+      <div class="var-name">C · Navy</div>
+      <div class="var-desc">deep blue-ink, cooler read</div>
+    </div>
+  </div>
+
+  <p class="note">
+    Pick a <b>stroke colour</b> — Graphite, Cocoa, or Navy. Pick whether to keep the <b>animation</b> (only fires on first load of a brief; static everywhere else). I'd go <b>Graphite + glass + animated on first load</b>.
+  </p>
+</div>
+</body>
+</html>

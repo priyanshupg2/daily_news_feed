@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Display type — taglines</title>
+<style>
+.display-card {
+  background: var(--prism-paper);
+  position: relative;
+  padding: 36px 40px 30px;
+  overflow: hidden;
+}
+
+/* Soft refraction halo bottom-left */
+.glow {
+  position: absolute; inset: auto -10% -40% -10%; height: 80%;
+  background:
+    radial-gradient(60% 80% at 18% 100%, color-mix(in oklch, var(--lens-founder) 28%, transparent) 0%, transparent 60%),
+    radial-gradient(50% 70% at 50% 100%, color-mix(in oklch, var(--lens-researcher) 24%, transparent) 0%, transparent 60%),
+    radial-gradient(50% 80% at 88% 100%, color-mix(in oklch, var(--lens-engineer) 28%, transparent) 0%, transparent 60%);
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.inner { position: relative; z-index: 1; }
+
+.tag-row {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 24px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: 1px solid var(--prism-hairline);
+}
+.tag-row:first-of-type { border-top: none; padding-top: 0; }
+
+.tag-primary {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 0.98;
+  letter-spacing: -0.028em;
+  color: var(--prism-ink);
+  margin: 0;
+  font-variation-settings: "opsz" 60;
+}
+.tag-primary em { font-style: italic; font-weight: 500; }
+
+.tag-alt-a {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.05;
+  letter-spacing: -0.018em;
+  color: var(--prism-ink);
+  margin: 0;
+  font-variation-settings: "opsz" 36;
+}
+
+.tag-alt-b {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--prism-ink-2);
+  margin: 0;
+  font-variation-settings: "opsz" 30;
+}
+
+.spec {
+  font-family: var(--font-mono); font-size: 9.5px;
+  color: var(--prism-ink-3); text-align: right; line-height: 1.5;
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+.spec b { font-family: var(--font-sans); font-weight: 600; color: var(--prism-ink); display: block; margin-bottom: 2px; letter-spacing: 0.1em; }
+</style>
+</head>
+<body>
+<div class="card display-card">
+  <div class="glow"></div>
+  <div class="inner">
+
+    <div class="tag-row">
+      <div class="tag-primary">Intelligence,<br/><em>refracted</em> for who you are.</div>
+      <div class="spec"><b>Primary</b>56 px<br/>Newsreader<br/>roman + italic</div>
+    </div>
+
+    <div class="tag-row">
+      <div class="tag-alt-a">One world, every lens you need.</div>
+      <div class="spec"><b>Alt · sub</b>32 px<br/>Newsreader<br/>italic</div>
+    </div>
+
+    <div class="tag-row">
+      <div class="tag-alt-b">Same world. Sharper view.</div>
+      <div class="spec"><b>Alt · utility</b>26 px<br/>Newsreader<br/>roman</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

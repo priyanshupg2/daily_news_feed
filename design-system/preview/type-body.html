@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Body & lead</title>
+<style>
+.stack { display: grid; grid-template-columns: 1fr 86px; gap: 22px; }
+.col-text > * + * { margin-top: 12px; }
+.spec { font-family: var(--font-mono); font-size: 10px; color: var(--prism-ink-3); line-height: 1.5; text-align: right; }
+.lead-tight { font-family: var(--font-display); font-style: italic; font-size: 19px; line-height: 1.35; color: var(--prism-ink); letter-spacing: -0.005em; font-variation-settings: "opsz" 24; margin: 0; }
+.body-tight { font-family: var(--font-sans); font-size: 14.5px; line-height: 1.55; color: var(--prism-ink); margin: 0; }
+.body-sm    { font-family: var(--font-sans); font-size: 12.5px; line-height: 1.5; color: var(--prism-ink-3); margin: 0; }
+.lead-tight strong { font-style: normal; font-family: var(--font-sans); font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
+</style>
+</head>
+<body>
+<div class="card" style="padding: 26px 32px;">
+  <div class="stack">
+    <div class="col-text">
+      <p class="lead-tight">Other tools shrink articles. Prism extracts claims, verifies them across sources, tells you what changed — and why it matters for your thesis.</p>
+      <p class="body-tight">Headlines become decisions. Each lens produces its own brief: the founder hat reads like a market memo, the engineer hat like a technical digest, the researcher hat like a lab notebook of what's moving.</p>
+      <p class="body-sm">Sources auto-mute when they stop delivering. The system gets sharper with use.</p>
+    </div>
+    <div class="spec">
+      Lead · 19 px<br/>Newsreader italic<br/>opsz 24
+      <br/><br/>
+      Body · 14.5 px<br/>Geist regular
+      <br/><br/>
+      Body-sm · 12.5 px<br/>Geist · ink-3
+    </div>
+  </div>
+</div>
+</body>
+</html>

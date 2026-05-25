@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Radii</title>
+<style>
+.r-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.r-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.r-box { width: 68px; height: 56px; background: var(--prism-card); border: 1px solid var(--prism-hairline); box-shadow: 0 1px 0 rgba(20,19,15,0.05); }
+.r-name { font-family: var(--font-mono); font-size: 10px; color: var(--prism-ink); }
+.r-val { font-family: var(--font-mono); font-size: 10px; color: var(--prism-ink-3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="r-grid">
+    <div class="r-item"><div class="r-box" style="border-radius:0;"></div><div class="r-name">none</div><div class="r-val">0</div></div>
+    <div class="r-item"><div class="r-box" style="border-radius:2px;"></div><div class="r-name">xs</div><div class="r-val">2</div></div>
+    <div class="r-item"><div class="r-box" style="border-radius:4px;"></div><div class="r-name">sm</div><div class="r-val">4</div></div>
+    <div class="r-item"><div class="r-box" style="border-radius:6px;"></div><div class="r-name">md ★</div><div class="r-val">6</div></div>
+    <div class="r-item"><div class="r-box" style="border-radius:10px;"></div><div class="r-name">lg</div><div class="r-val">10</div></div>
+    <div class="r-item"><div class="r-box" style="border-radius:999px;"></div><div class="r-name">pill</div><div class="r-val">∞</div></div>
+  </div>
+  <div style="margin-top: 18px; font-family: var(--font-sans); font-size: 11px; color: var(--prism-ink-3);">★ default for cards, buttons, inputs. Pill is chips-only.</div>
+</div>
+</body>
+</html>

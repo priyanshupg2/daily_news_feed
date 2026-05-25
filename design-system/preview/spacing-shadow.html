@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<title>Shadow / elevation</title>
+<style>
+.sh-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 8px 0 24px; }
+.sh-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.sh-box { width: 100px; height: 60px; background: var(--prism-card); border-radius: var(--r-md); }
+.sh-name { font-family: var(--font-mono); font-size: 11px; color: var(--prism-ink); }
+.sh-use { font-family: var(--font-sans); font-size: 10px; color: var(--prism-ink-3); text-align: center; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="sh-grid">
+    <div class="sh-item"><div class="sh-box" style="box-shadow: var(--sh-flat);"></div><div class="sh-name">sh-flat</div><div class="sh-use">cards (default)</div></div>
+    <div class="sh-item"><div class="sh-box" style="box-shadow: var(--sh-1);"></div><div class="sh-name">sh-1</div><div class="sh-use">hover lift</div></div>
+    <div class="sh-item"><div class="sh-box" style="box-shadow: var(--sh-2);"></div><div class="sh-name">sh-2</div><div class="sh-use">popover, tooltip</div></div>
+    <div class="sh-item"><div class="sh-box" style="box-shadow: var(--sh-pop);"></div><div class="sh-name">sh-pop</div><div class="sh-use">modal, palette</div></div>
+  </div>
+</div>
+</body>
+</html>
