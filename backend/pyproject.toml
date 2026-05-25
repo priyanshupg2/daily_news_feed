@@ -13,6 +13,7 @@ dependencies = [
     "apscheduler",
     "feedparser",
     "python-dateutil",
+    "anthropic",
 ]
 
 [build-system]
