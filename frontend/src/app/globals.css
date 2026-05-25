@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ============================================================
+   Map Prism tokens (set in design-system/colors_and_type.css)
+   into Tailwind v4 utilities. Using @theme inline so the
+   utilities resolve the CSS vars at render time — that way
+   time-of-day theme classes on <body> cascade through.
+   ============================================================ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Surfaces */
+  --color-paper:      var(--prism-paper);
+  --color-paper-2:    var(--prism-paper-2);
+  --color-paper-3:    var(--prism-paper-3);
+  --color-card:       var(--prism-card);
+  --color-card-edge:  var(--prism-card-edge);
+
+  /* Ink */
+  --color-ink:        var(--prism-ink);
+  --color-ink-2:      var(--prism-ink-2);
+  --color-ink-3:      var(--prism-ink-3);
+  --color-ink-4:      var(--prism-ink-4);
+  --color-hairline:   var(--prism-hairline);
+
+  /* Night surfaces */
+  --color-night:      var(--prism-night);
+  --color-night-2:    var(--prism-night-2);
+  --color-night-3:    var(--prism-night-3);
+  --color-night-fg:   var(--prism-night-fg);
+  --color-night-fg-2: var(--prism-night-fg-2);
+
+  /* Signal */
+  --color-signal:     var(--prism-signal);
+  --color-signal-on:  var(--prism-signal-on);
+
+  /* Lens spectrum */
+  --color-lens-founder:        var(--lens-founder);
+  --color-lens-founder-soft:   var(--lens-founder-soft);
+  --color-lens-founder-ink:    var(--lens-founder-ink);
+  --color-lens-engineer:       var(--lens-engineer);
+  --color-lens-engineer-soft:  var(--lens-engineer-soft);
+  --color-lens-engineer-ink:   var(--lens-engineer-ink);
+  --color-lens-researcher:     var(--lens-researcher);
+  --color-lens-researcher-soft:var(--lens-researcher-soft);
+  --color-lens-researcher-ink: var(--lens-researcher-ink);
+  --color-lens-operator:       var(--lens-operator);
+  --color-lens-operator-soft:  var(--lens-operator-soft);
+  --color-lens-operator-ink:   var(--lens-operator-ink);
+  --color-lens-investor:       var(--lens-investor);
+  --color-lens-investor-soft:  var(--lens-investor-soft);
+  --color-lens-investor-ink:   var(--lens-investor-ink);
+
+  /* Semantic */
+  --color-positive:   var(--prism-positive);
+  --color-warning:    var(--prism-warning);
+  --color-critical:   var(--prism-critical);
+  --color-info:       var(--prism-info);
+
+  /* Radii */
+  --radius-xs:   var(--r-xs);
+  --radius-sm:   var(--r-sm);
+  --radius-md:   var(--r-md);
+  --radius-lg:   var(--r-lg);
+  --radius-xl:   var(--r-xl);
+  --radius-pill: var(--r-pill);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--prism-paper);
+  color: var(--prism-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
