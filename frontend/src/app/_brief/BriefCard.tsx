@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Brief, Lens } from "./data";
+import type { Brief, Lens } from "./types";
 import { BookmarkIcon, ThumbsDownIcon, ThumbsUpIcon } from "./icons";
 
 type Props = {

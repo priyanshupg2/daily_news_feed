@@ -1,6 +1,9 @@
 import json
+import logging
 
 import httpx
+
+logger = logging.getLogger(__name__)
 
 
 class OllamaProvider:
@@ -44,4 +47,18 @@ class OllamaProvider:
             )
             resp.raise_for_status()
             text = resp.json()["response"]
+        # Same contract as ClaudeProvider: malformed JSON → empty dict
+        # rather than an exception. Lets callers branch on `not result`
+        # uniformly across providers.
+        try:
             return json.loads(text)
+        except json.JSONDecodeError:
+            logger.warning("Ollama returned non-JSON text: %s", text[:200])
+            stripped = (
+                text.strip().removeprefix("```json").removeprefix("```")
+                .removesuffix("```").strip()
+            )
+            try:
+                return json.loads(stripped)
+            except json.JSONDecodeError:
+                return {}

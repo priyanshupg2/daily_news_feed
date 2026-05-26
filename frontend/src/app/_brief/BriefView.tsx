@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { BriefCard } from "./BriefCard";
-import { type Brief, LENSES } from "./data";
+import { type Brief, LENSES } from "./types";
 import { SlidersIcon, SparkleIcon } from "./icons";
 
 type ThemeId =
