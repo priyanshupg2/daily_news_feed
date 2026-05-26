@@ -1,0 +1,68 @@
+flowchart TB
+    classDef heur fill:#fff7d6,stroke:#a97e00,color:#3a2c00
+    classDef sonnet fill:#e2effe,stroke:#1864ab,color:#0b3d77
+    classDef opus fill:#f3e4ff,stroke:#7048b7,color:#2c1357
+    classDef store fill:#eef2f5,stroke:#465968,color:#1f2933
+    classDef ui fill:#fbe7d8,stroke:#a44a18,color:#3a1908
+
+    subgraph Sources["Discovery (every 2h)"]
+        ARX["arXiv<br/>cs.AI · cs.LG · cs.CL"]
+        HN["Hacker News<br/>Algolia, points > 50"]
+        RDT["Reddit<br/>r/MachineLearning · r/LocalLLaMA · r/singularity"]
+    end
+
+    ITEMS[("items<br/>(raw, dedup'd)")]:::store
+
+    Sources --> ITEMS
+
+    subgraph Annotation["Annotation — per (item × lens), Sonnet 4.6"]
+        KG{{"Keyword<br/>pre-gate"}}:::heur
+        AN["LLM score:<br/>relevance · quality · novelty<br/>importance · topic_tag · rationale"]:::sonnet
+        KG -->|"miss → stub 0.0"| AN_OUT
+        KG -->|"hit"| AN
+        AN --> AN_OUT[("item_annotations<br/>per item × lens")]
+    end
+
+    AN_OUT:::store
+    ITEMS --> KG
+
+    subgraph Cluster["Clustering — Sonnet 4.6"]
+        HC{{"Candidate groups<br/>(topic_tag · URL · title Jaccard ≥ 0.4)"}}:::heur
+        CC["LLM confirm / split"]:::sonnet
+        HC -->|"singletons skip LLM"| TC[("topic_clusters")]
+        HC -->|"multi-item"| CC --> TC
+    end
+    AN_OUT --> HC
+    TC:::store
+
+    subgraph Trend["Trend judge — Opus 4.7"]
+        TH{{"size ≥ 3 ∧ sources ≥ 2<br/>or yesterday ∈ {emerging,sustained}"}}:::heur
+        TJ["emerging · sustained ·<br/>fading · noise"]:::opus
+        TH -->|"fails → noise"| TJ_OUT
+        TH -->|"passes"| TJ --> TJ_OUT[("trend_judgments")]
+    end
+    TJ_OUT:::store
+    TC --> TH
+
+    subgraph Merge["Merge + claims — Opus 4.7"]
+        FH{{"Framing heuristic<br/>item_anchored ⇔ synthesis"}}:::heur
+        MG["title · lead · why_it_matters<br/>+ claims pinned to sources"]:::opus
+        FH --> MG
+    end
+    TC --> FH
+    TJ_OUT --> FH
+    AN_OUT --> FH
+    MG --> FB[("feed_items<br/>+ feed_item_lenses<br/>+ brief_claims")]:::store
+
+    subgraph Rank["Rank + cap (deterministic)"]
+        RK{{"0.4·rel + 0.2·imp + 0.2·nov<br/>+ 0.1·qual + 0.1·pref<br/>per (brief, lens)"}}:::heur
+        QT{{"adaptive 0–4 per lens<br/>hard cap 7 total"}}:::heur
+        RK --> QT
+    end
+    FB --> RK
+    QT --> FB
+
+    API["FastAPI /api/feed/<br/>+ /lenses · /raw · /feedback"]:::ui
+    UI["Next.js page<br/>multi-lens eyebrow"]:::ui
+
+    FB --> API --> UI

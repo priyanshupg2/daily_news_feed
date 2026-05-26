@@ -136,8 +136,10 @@ async def build_briefs(feed_date: date, provider: LLMProvider) -> int:
     written = 0
     for cluster in clusters:
         verdict = trends.get(cluster["id"], {}).get("verdict")
-        if verdict == "noise":
-            continue
+        # `noise` is a trend verdict — it doesn't mean the cluster is
+        # un-briefable, just that it's not a sustained signal. We still
+        # produce briefs for high-relevance noise clusters; framing
+        # falls back to item_anchored via _choose_framing.
 
         item_ids = json.loads(cluster["item_ids"])
         if not item_ids:
@@ -249,6 +251,10 @@ async def build_briefs(feed_date: date, provider: LLMProvider) -> int:
         if not brief or "title" not in brief:
             continue
 
+        title = (brief.get("title") or "").strip() or "Untitled brief"
+        lead = (brief.get("lead") or "").strip()
+        why = (brief.get("why_it_matters") or "").strip()
+
         # Persist.
         brief_id = str(uuid.uuid4())
         avg_relevance = sum(s for _, s in qualifying_lenses) / len(qualifying_lenses)
@@ -265,10 +271,10 @@ async def build_briefs(feed_date: date, provider: LLMProvider) -> int:
                     brief_id,
                     cluster["id"],
                     framing,
-                    brief["title"][:200],
-                    brief["lead"][:400],
-                    brief["lead"][:400],  # `summary` legacy column; keep populated
-                    brief["why_it_matters"][:400],
+                    title[:200],
+                    lead[:400],
+                    lead[:400],  # `summary` legacy column; keep populated
+                    why[:400],
                     json.dumps([
                         {
                             "item_id": it["id"],
@@ -290,11 +296,16 @@ async def build_briefs(feed_date: date, provider: LLMProvider) -> int:
                     """,
                     (brief_id, lens_id, score),
                 )
-            for claim in brief.get("claims") or []:
-                idx = claim.get("source_index") or 0
-                if idx < 0 or idx >= len(top_items):
+            # Assign claim ordering server-side; the LLM's `n` is a
+            # hint but we don't trust it for uniqueness.
+            for n, claim in enumerate(brief.get("claims") or [], start=1):
+                idx = claim.get("source_index")
+                if not isinstance(idx, int) or idx < 0 or idx >= len(top_items):
                     idx = 0
                 src_item = top_items[idx]
+                text = (claim.get("text") or "").strip()
+                if not text:
+                    continue
                 await db.execute(
                     """
                     INSERT INTO brief_claims
@@ -304,8 +315,8 @@ async def build_briefs(feed_date: date, provider: LLMProvider) -> int:
                     """,
                     (
                         brief_id,
-                        claim.get("n", 1),
-                        claim["text"][:300],
+                        n,
+                        text[:300],
                         src_item["id"],
                         claim.get("citation_text")
                         or _build_citation(src_item),

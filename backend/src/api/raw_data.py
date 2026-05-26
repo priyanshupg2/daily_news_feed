@@ -22,8 +22,14 @@ async def get_raw_items(
         )
         params.append(topic)
     if lens:
+        # Show every item that was scored under this lens, including
+        # heuristic-stub annotations (relevance 0.0). The raw-data
+        # browser is the audit surface — filtering by relevance here
+        # would hide the items the pre-gate skipped, which is exactly
+        # what an audit needs to see.
         where.append(
-            "EXISTS (SELECT 1 FROM item_annotations a WHERE a.item_id = i.id AND a.lens_id = ? AND a.relevance_score >= 0.3)"
+            "EXISTS (SELECT 1 FROM item_annotations a "
+            "WHERE a.item_id = i.id AND a.lens_id = ?)"
         )
         params.append(lens)
 

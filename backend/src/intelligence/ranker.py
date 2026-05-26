@@ -37,17 +37,31 @@ async def rank_and_select(feed_date: date) -> int:
         )
         rows = [dict(r) for r in await cursor.fetchall()]
 
-        # Annotation rollup: best importance / novelty / quality per
-        # cluster (any lens).
+        # Annotation rollup per cluster. We average each item's
+        # best-lens score first (so an item annotated across N lenses
+        # contributes once, not N times), then average those across
+        # the cluster. `json_each` matches item_ids by value, not
+        # substring, so a numeric id that's a prefix of another id
+        # won't bleed across clusters.
         cursor = await db.execute(
             """
+            WITH item_best AS (
+                SELECT
+                    a.item_id,
+                    MAX(a.importance_score) AS importance,
+                    MAX(a.novelty_score) AS novelty,
+                    MAX(a.quality_score) AS quality
+                FROM item_annotations a
+                GROUP BY a.item_id
+            )
             SELECT
                 tc.id AS cluster_id,
-                AVG(a.importance_score) AS importance,
-                AVG(a.novelty_score) AS novelty,
-                AVG(a.quality_score) AS quality
+                AVG(ib.importance) AS importance,
+                AVG(ib.novelty) AS novelty,
+                AVG(ib.quality) AS quality
             FROM topic_clusters tc
-            JOIN item_annotations a ON instr(tc.item_ids, a.item_id) > 0
+            JOIN json_each(tc.item_ids) je
+            JOIN item_best ib ON ib.item_id = je.value
             WHERE tc.feed_date = ?
             GROUP BY tc.id
             """,

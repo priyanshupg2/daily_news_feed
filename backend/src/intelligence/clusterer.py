@@ -66,8 +66,9 @@ def _heuristic_groups(items: list[dict]) -> list[list[dict]]:
 
     groups = list(by_tag.values())
 
-    # Pass 2: URL-key matches across tags (merge into existing groups
-    # or form new ones).
+    # Pass 2: URL-key matches. Build an index over both tagged and
+    # untagged items so untagged items pointing at the same URL merge
+    # together even when no tagged item is in the picture.
     url_to_group: dict[str, list[dict]] = {}
     for g in groups:
         for it in g:
@@ -78,6 +79,10 @@ def _heuristic_groups(items: list[dict]) -> list[list[dict]]:
         k = _url_key(it.get("url"))
         if k and k in url_to_group:
             url_to_group[k].append(it)
+        elif k:
+            new_group = [it]
+            url_to_group[k] = new_group
+            groups.append(new_group)
         else:
             groups.append([it])
 

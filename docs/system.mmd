@@ -1,0 +1,47 @@
+flowchart LR
+    classDef proc fill:#e2effe,stroke:#1864ab,color:#0b3d77
+    classDef db fill:#eef2f5,stroke:#465968,color:#1f2933
+    classDef ext fill:#fff7d6,stroke:#a97e00,color:#3a2c00
+    classDef ui fill:#fbe7d8,stroke:#a44a18,color:#3a1908
+
+    subgraph User["Browser"]
+        FE["Next.js 16<br/>page.tsx<br/>BriefView · BriefCard"]:::ui
+    end
+
+    subgraph Server["Backend process (uvicorn)"]
+        FAPI["FastAPI app<br/>/api/feed · /api/lenses<br/>/api/raw · /api/feedback"]:::proc
+        SCHED["APScheduler<br/>discovery: */2h<br/>pipeline: 06:00 daily"]:::proc
+        PIPE["pipeline.run_full_pipeline<br/>discovery → annotate →<br/>cluster → trend → merge → rank"]:::proc
+        PROV["Providers<br/>sonnet (Sonnet 4.6)<br/>opus (Opus 4.7)<br/>fallback: Ollama"]:::proc
+    end
+
+    subgraph Storage["SQLite (aiosqlite, WAL)"]
+        DB[("data/news_feed.db<br/>items · item_annotations<br/>topic_clusters · trend_judgments<br/>feed_items · feed_item_lenses<br/>brief_claims · lenses<br/>+ feedback tables")]:::db
+    end
+
+    subgraph External["External services"]
+        ARX["export.arxiv.org<br/>Atom API"]:::ext
+        HN["hn.algolia.com<br/>JSON API"]:::ext
+        RD["reddit.com<br/>public .json"]:::ext
+        CLD["api.anthropic.com<br/>messages<br/>(prompt-cached)"]:::ext
+    end
+
+    FE -->|"GET /api/feed/?lens=…"| FAPI
+    FE -->|"PUT /api/profile/lenses/:id"| FAPI
+
+    FAPI -->|"reads"| DB
+    FAPI -->|"BackgroundTasks<br/>POST /feed/refresh"| PIPE
+
+    SCHED -->|"every 2h"| PIPE
+    SCHED -->|"06:00"| PIPE
+
+    PIPE -->|"discovery"| ARX
+    PIPE -->|"discovery"| HN
+    PIPE -->|"discovery"| RD
+
+    PIPE -->|"annotate · cluster"| PROV
+    PIPE -->|"trend · merge"| PROV
+    PIPE -->|"reads/writes"| DB
+
+    PROV -->|"Sonnet 4.6 calls"| CLD
+    PROV -->|"Opus 4.7 calls"| CLD

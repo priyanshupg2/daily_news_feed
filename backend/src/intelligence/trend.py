@@ -24,14 +24,25 @@ async def judge_trends(feed_date: date, provider: LLMProvider) -> int:
         clusters = [dict(r) for r in await cursor.fetchall()]
 
         yesterday = (feed_date - timedelta(days=1)).isoformat()
+        # If yesterday produced multiple clusters under the same tag,
+        # prefer the strongest verdict (emerging/sustained beat fading
+        # beats noise). Otherwise the dict order would be undefined.
         cursor = await db.execute(
             """
             SELECT topic_tag, verdict FROM trend_judgments
             WHERE feed_date = ?
+            ORDER BY CASE verdict
+                WHEN 'emerging' THEN 0
+                WHEN 'sustained' THEN 1
+                WHEN 'fading' THEN 2
+                ELSE 3
+            END
             """,
             (yesterday,),
         )
-        prior = {r["topic_tag"]: r["verdict"] for r in await cursor.fetchall()}
+        prior: dict[str, str] = {}
+        for r in await cursor.fetchall():
+            prior.setdefault(r["topic_tag"], r["verdict"])
 
     if not clusters:
         return 0

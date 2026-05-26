@@ -27,7 +27,7 @@ async def get_feed(
                 WHERE fi.feed_date = ?
                   AND fi.final_rank IS NOT NULL
                   AND fil.lens_id = ?
-                ORDER BY fi.final_rank DESC
+                ORDER BY fi.final_rank DESC, fi.id
                 """,
                 (feed_date, lens),
             )
@@ -36,7 +36,7 @@ async def get_feed(
                 """
                 SELECT * FROM feed_items
                 WHERE feed_date = ? AND final_rank IS NOT NULL
-                ORDER BY final_rank DESC
+                ORDER BY final_rank DESC, id
                 """,
                 (feed_date,),
             )

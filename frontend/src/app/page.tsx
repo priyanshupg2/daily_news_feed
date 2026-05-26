@@ -31,12 +31,13 @@ type APIBrief = {
 function adapt(api: APIBrief): Brief {
   const primary = api.primary_lens ?? api.lenses[0]?.lens_id ?? "engineer";
   const lensIds = api.lenses.map((l) => l.lens_id);
+  const summary = api.summary ?? "";
   return {
     id: api.id,
     lens: primary,
     lenses: lensIds,
-    title: api.title ?? api.summary.slice(0, 80),
-    lead: api.lead ?? api.summary,
+    title: api.title ?? summary.slice(0, 80),
+    lead: api.lead ?? summary,
     why: api.why_it_matters ?? "",
     source_count: api.source_count,
     read_min: Math.max(2, Math.min(10, Math.ceil(api.source_count / 2))),
